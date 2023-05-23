@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_paciente"
+    app:startDestination="@id/paga_datos">
+
+    <fragment
+        android:id="@+id/paga_datos"
+        android:name="com.example.gestioncitasparadise.actividades.uiPaciente.DatosFragment"
+        tools:layout="@layout/fragment_datos"/>
+
+    <fragment
+        android:id="@+id/page_reserva"
+        android:name="com.example.gestioncitasparadise.actividades.uiPaciente.ReservaFragment"
+        tools:layout="@layout/fragment_reserva"/>
+
+    <fragment
+        android:id="@+id/page_historial"
+        android:name="com.example.gestioncitasparadise.actividades.uiPaciente.HistorialFragment"
+        tools:layout="@layout/fragment_historial"/>
+
+
+</navigation>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/paga_Historial"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Historial"/>
+    <item
+        android:id="@+id/page_Registrar_Doctor"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Registrar doctor"/>
+    <item
+        android:id="@+id/page_Registrar_especialidad"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Agregar Especialidad"/>
+
+</menu>

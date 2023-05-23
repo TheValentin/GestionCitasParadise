@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_doctor"
+    app:startDestination="@id/paga_DatosDoctor">
+
+
+    <fragment
+        android:id="@+id/paga_DatosDoctor"
+        android:name="com.example.gestioncitasparadise.actividades.uiDoctor.DatosDoctorFragment"
+        tools:layout="@layout/fragment_datos_doctor"/>
+
+    <fragment
+        android:id="@+id/page_Lista_Doctor"
+        android:name="com.example.gestioncitasparadise.actividades.uiDoctor.ListaDoctorFragment"
+        tools:layout="@layout/fragment_lista_doctor"/>
+
+    <fragment
+        android:id="@+id/page_Diagnostico_doctor"
+        android:name="com.example.gestioncitasparadise.actividades.uiDoctor.DiagnosticoDoctorFragment"
+        tools:layout="@layout/fragment_diagnostico_doctor"/>
+
+
+</navigation>

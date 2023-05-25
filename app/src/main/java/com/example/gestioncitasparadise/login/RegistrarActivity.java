@@ -24,9 +24,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.gestioncitasparadise.R;
+import com.example.gestioncitasparadise.encriptacion;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
@@ -34,10 +38,9 @@ import java.util.Map;
 public class RegistrarActivity extends AppCompatActivity {
 
     private TextInputLayout t_nombre,t_apellido,t_telefono,t_dni,t_correo,t_contrasena,t_dirrecion,t_fecha;
-
-
     Button b_Registrar, btnCalendario;
 
+    encriptacion encriptacion  = new encriptacion();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,9 +92,59 @@ public class RegistrarActivity extends AppCompatActivity {
          String fecha= t_fecha.getEditText().getText().toString().trim();
          String direccion= t_dirrecion.getEditText().getText().toString().trim();
          String correo= t_correo.getEditText().getText().toString().trim();
-         String contrasena= t_contrasena.getEditText().getText().toString().trim();
+         String contrasena = t_contrasena.getEditText().getText().toString().trim();
+
+        String encryptedPassword = encriptacion.encryptPassword(contrasena);
 
 
+        if (nombre.isEmpty()) {
+            t_nombre.getEditText().setError("Este campo es obligatorio");
+            return;
+        } else {
+            t_nombre.setError(null);
+        }
+
+        if (apeliido.isEmpty()) {
+            t_apellido.getEditText().setError("Este campo es obligatorio");
+            return;
+        } else {
+            t_apellido.setError(null);
+        }
+
+        if (telefono.isEmpty()) {
+            t_telefono.getEditText().setError("Este campo es obligatorio");
+            return;
+        } else {
+            t_telefono.setError(null);
+        }
+
+        if (dni.isEmpty()) {
+            t_dni.getEditText().setError("Este campo es obligatorio");
+            return;
+        } else {
+            t_dni.setError(null);
+        }
+
+        if (fecha.isEmpty()) {
+            t_fecha.getEditText().setError("Este campo es obligatorio");
+            return;
+        } else {
+            t_fecha.setError(null);
+        }
+
+        if (correo.isEmpty()) {
+            t_correo.getEditText().setError("Este campo es obligatorio");
+            return;
+        } else {
+            t_correo.setError(null);
+        }
+
+        if (contrasena.isEmpty()) {
+            t_contrasena.getEditText().setError("Este campo es obligatorio");
+            return;
+        } else {
+            t_contrasena.setError(null);
+        }
 
 
 
@@ -139,22 +192,16 @@ public class RegistrarActivity extends AppCompatActivity {
                   params.put("telefono",telefono);
                   params.put("direccion",direccion);
                    params.put("email",correo);
-                    params.put("password",contrasena);
-
+                    params.put("password",encryptedPassword);
                     return params;
                 }
-
             };
-
             RequestQueue requestQueue= Volley.newRequestQueue( RegistrarActivity.this);
             requestQueue.add(request);
-
         }
-
-
     }
-
     private void showDatePicker() {
+        //calendario
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
@@ -173,8 +220,6 @@ public class RegistrarActivity extends AppCompatActivity {
         // Muestra el cuadro de calendario
         datePickerDialog.show();
     }
-
-
 
 
 }

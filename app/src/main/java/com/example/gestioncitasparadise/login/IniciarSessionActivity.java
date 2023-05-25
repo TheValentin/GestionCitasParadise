@@ -2,7 +2,6 @@ package com.example.gestioncitasparadise.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +9,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -24,6 +22,7 @@ import com.example.gestioncitasparadise.R;
 import com.example.gestioncitasparadise.actividades.AdministradorMenu;
 import com.example.gestioncitasparadise.actividades.DoctorMenu;
 import com.example.gestioncitasparadise.actividades.pacienteMenu;
+import com.example.gestioncitasparadise.encriptacion;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.HashMap;
@@ -32,6 +31,8 @@ import java.util.Map;
 public class IniciarSessionActivity extends AppCompatActivity {
 
     private TextInputLayout txtUsuario, txtContraseña;
+    encriptacion encriptacion  = new encriptacion();
+
 
     String url = "https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/Login.php";
 
@@ -46,27 +47,16 @@ public class IniciarSessionActivity extends AppCompatActivity {
     private void enlazarControlado() {
         txtUsuario = (TextInputLayout) findViewById(R.id.txtUsuario);
         txtContraseña = (TextInputLayout) findViewById(R.id.txtContrasena);
-    }
-
-    public void LoginIniciando(View v) {
-
-
-        if (txtUsuario.getEditText().getText().toString().equals("admin") && txtContraseña.getEditText().getText().toString().equals("123")) {
-            Intent intent = new Intent(this, AdministradorMenu.class);
-            startActivity(intent);
-
-        } else if (txtUsuario.getEditText().getText().toString().equals("paciente") && txtContraseña.getEditText().getText().toString().equals("123")) {
-            Intent intent = new Intent(this, pacienteMenu.class);
-            startActivity(intent);
-
-        } else if (txtUsuario.getEditText().getText().toString().equals("doctor") && txtContraseña.getEditText().getText().toString().equals("123")) {
-            Intent intent = new Intent(this, DoctorMenu.class);
-            startActivity(intent);
-
-        }
-
+        txtContraseña.setPasswordVisibilityToggleEnabled(true);
 
     }
+
+    public void CambiarContraseña(View v) {
+        Intent intent = new Intent(this, OlvidarContrasena.class);
+        startActivity(intent);
+    }
+
+
 
     public void procesoRegistrar(View v) {
         Intent intent = new Intent(this, RegistrarActivity.class);
@@ -77,7 +67,10 @@ public class IniciarSessionActivity extends AppCompatActivity {
         String email = txtUsuario.getEditText().getText().toString().trim();
         String contraseña = txtContraseña.getEditText().getText().toString().trim();
 
+        String encryptedPassword = encriptacion.encryptPassword(contraseña);
+
         if (email.equals("")) {
+            txtUsuario.getEditText().setError("No puede quedar Vacio");
             Toast.makeText(this, "Ingrese su correo", Toast.LENGTH_SHORT).show();
         } else if (contraseña.equals("")) {
             Toast.makeText(this, "Ingrese su contraseña", Toast.LENGTH_SHORT).show();
@@ -165,7 +158,7 @@ public class IniciarSessionActivity extends AppCompatActivity {
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> params = new HashMap<>();
                     params.put("correo", email);
-                    params.put("contrasena", contraseña);
+                    params.put("contrasena", encryptedPassword);
                     return params;
                 }
             };

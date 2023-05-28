@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
@@ -68,6 +69,12 @@ public class IniciarSessionActivity extends AppCompatActivity {
         String contraseña = txtContraseña.getEditText().getText().toString().trim();
 
         String encryptedPassword = encriptacion.encryptPassword(contraseña);
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            // El correo electrónico no tiene el formato correcto
+            txtUsuario.setError("Ingrese un correo electrónico válido");
+            return;
+        }
 
         if (email.equals("")) {
             txtUsuario.getEditText().setError("No puede quedar Vacio");

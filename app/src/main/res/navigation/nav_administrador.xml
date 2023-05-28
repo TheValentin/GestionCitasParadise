@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/page_Registrar_especialidad"
-        android:name="com.example.gestioncitasparadise.actividades.uiAdministrador.RegistrarEspecialidadAdministradorFragment"
+        android:name="com.example.gestioncitasparadise.actividades.uiAdministrador.Especialidad.ListaEspecialidadAdministradorFragment"
         tools:layout="@layout/fragment_registrar_especialidad_administrador"/>
 
 </navigation>

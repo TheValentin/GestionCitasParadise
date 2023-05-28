@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -144,6 +145,12 @@ public class RegistrarActivity extends AppCompatActivity {
             return;
         } else {
             t_contrasena.setError(null);
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()) {
+            // El correo electrónico no tiene el formato correcto
+            t_correo.setError("Ingrese un correo electrónico válido");
+            return;
         }
 
 

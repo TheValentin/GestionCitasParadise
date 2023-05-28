@@ -9,10 +9,10 @@
     <item
         android:id="@+id/page_Registrar_Doctor"
         android:icon="@drawable/ic_launcher_foreground"
-        android:title="Registrar doctor"/>
+        android:title="Doctores"/>
     <item
         android:id="@+id/page_Registrar_especialidad"
         android:icon="@drawable/ic_launcher_foreground"
-        android:title="Agregar Especialidad"/>
+        android:title="Especialidades"/>
 
 </menu>

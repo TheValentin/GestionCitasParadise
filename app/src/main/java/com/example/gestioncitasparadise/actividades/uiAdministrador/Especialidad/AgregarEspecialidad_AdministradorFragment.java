@@ -1,11 +1,21 @@
 package com.example.gestioncitasparadise.actividades.uiAdministrador.Especialidad;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,36 +28,48 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.gestioncitasparadise.R;
-import com.example.gestioncitasparadise.actividades.AdministradorMenu;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class AgregarEspecialidad_administrador extends AppCompatActivity {
+
+public class AgregarEspecialidad_AdministradorFragment extends Fragment {
 
     private Button b_cancelarEspecialidad, b_AgregarEspecialidad;
     private TextInputLayout txtEspecialidad;
     private EditText txtMultiLine;
     private String url="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/AgregarEspecialidad.php";
 
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_agregar_especialidad_administrador);
-        enlazarControlado();
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_agregar_especialidad__administrador, container, false);
     }
 
-    private void enlazarControlado() {
-        txtEspecialidad=findViewById(R.id.TxtEspecialidad);
-        txtMultiLine=findViewById(R.id.txtDescripcion);
-        b_AgregarEspecialidad=findViewById(R.id.btnAgregarEspecialidad);
-        b_cancelarEspecialidad = findViewById(R.id.btnCancelarEspecialidad);
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.bottomNavigationViewAdministrador);
+        bottomNavigationView.setVisibility(View.GONE);
+
+
+        txtEspecialidad=view.findViewById(R.id.TxtEspecialidad);
+        txtMultiLine=view.findViewById(R.id.txtDescripcion);
+        b_AgregarEspecialidad=view.findViewById(R.id.btnAgregarEspecialidad);
+        b_cancelarEspecialidad = view.findViewById(R.id.btnCancelarEspecialidad);
 
         b_cancelarEspecialidad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                fragmentManager.popBackStack();
+
             }
         });
 
@@ -59,10 +81,7 @@ public class AgregarEspecialidad_administrador extends AppCompatActivity {
             }
         });
 
-
-
     }
-
     private void insertarDatos() {
         String Especialidad= txtEspecialidad.getEditText().getText().toString();
         String descripcion= txtMultiLine.getText().toString().trim();
@@ -80,11 +99,11 @@ public class AgregarEspecialidad_administrador extends AppCompatActivity {
         } else {
             txtMultiLine.setError(null);
         }
-        final ProgressDialog progressDialog = new ProgressDialog(this);
+        final ProgressDialog progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Cargando");
 
         if (Especialidad.isEmpty()){
-            Toast.makeText(this,"ingrese Especialidad",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(),"ingrese Especialidad",Toast.LENGTH_SHORT).show();
             return;
         }else {
             progressDialog.show();
@@ -95,15 +114,14 @@ public class AgregarEspecialidad_administrador extends AppCompatActivity {
                     String valor=response.trim();
 
                     if (valor.equalsIgnoreCase("Datos insertados correctamente.")) {
-                        Toast.makeText(AgregarEspecialidad_administrador.this, "Especialidad Registrada", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Especialidad Registrada", Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
 
-
-                    startActivity(new Intent(AgregarEspecialidad_administrador.this, AdministradorMenu.class));
-
+                        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                        fragmentManager.popBackStack();
 
                     } else {
-                        Toast.makeText(AgregarEspecialidad_administrador.this, valor, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), valor, Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
 
                     }
@@ -111,7 +129,7 @@ public class AgregarEspecialidad_administrador extends AppCompatActivity {
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(AgregarEspecialidad_administrador.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
                 }
             }){
@@ -125,7 +143,7 @@ public class AgregarEspecialidad_administrador extends AppCompatActivity {
                     return params;
                 }
             };
-            RequestQueue requestQueue= Volley.newRequestQueue( AgregarEspecialidad_administrador.this);
+            RequestQueue requestQueue= Volley.newRequestQueue( getActivity());
             requestQueue.add(request);
         }
     }

@@ -16,12 +16,6 @@
         android:theme="@style/Theme.GestionCitasParadise"
         tools:targetApi="31" >
         <activity
-            android:name=".actividades.uiAdministrador.Especialidad.ActualizarEspecialidad"
-            android:exported="false" />
-        <activity
-            android:name=".actividades.uiAdministrador.Especialidad.AgregarEspecialidad_administrador"
-            android:exported="false" />
-        <activity
             android:name=".login.OlvidarContrasena"
             android:exported="false" />
         <activity

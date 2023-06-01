@@ -1,17 +1,17 @@
 package com.example.gestioncitasparadise.actividades.uiAdministrador.Especialidad;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -31,40 +31,57 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ActualizarEspecialidad extends AppCompatActivity {
+
+public class ActualizarEspecialidad_AdministradorFragment extends Fragment {
+
 
     private Button b_cancelarEspecialidad, b_EditEspecialidad;
     private TextInputLayout txtEspecialidad, TxtIDEspecialidadEdit;
     private EditText txtMultiLine;
-    private  int position;
     private String url="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/ActualizarEspecialiad.php";
 
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actualizar_especialidad);
-        enlazarControlado();
+
     }
 
-    private void enlazarControlado() {
-        TxtIDEspecialidadEdit=findViewById(R.id.TxtIDEspecialidadEdit);
-        txtEspecialidad=findViewById(R.id.TxtEspecialidadEdit);
-        txtMultiLine=findViewById(R.id.txtDescripcionEdit);
-        b_EditEspecialidad=findViewById(R.id.btnEspecialidadEdit);
-        b_cancelarEspecialidad = findViewById(R.id.btnCancelarEspecialidadEdit);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_actualizar_especialidad__administrador, container, false);
+    }
 
-        Intent intent=getIntent();
-        position=intent.getExtras().getInt("position");
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        TxtIDEspecialidadEdit=view.findViewById(R.id.TxtIDEspecialidadEdit);
+        txtEspecialidad=view.findViewById(R.id.TxtEspecialidadEdit);
+        txtMultiLine=view.findViewById(R.id.txtDescripcionEdit);
+        b_EditEspecialidad=view.findViewById(R.id.btnEspecialidadEdit);
+        b_cancelarEspecialidad = view.findViewById(R.id.btnCancelarEspecialidadEdit);
+        BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.bottomNavigationViewAdministrador);
+        bottomNavigationView.setVisibility(View.GONE);
 
-        TxtIDEspecialidadEdit.getEditText().setText(ListaEspecialidadAdministradorFragment.especialidadsArrayList.get(position).getId_Especialidad());
-        txtEspecialidad.getEditText().setText(ListaEspecialidadAdministradorFragment.especialidadsArrayList.get(position).getNombreEspecialidad());
-        txtMultiLine.setText(ListaEspecialidadAdministradorFragment.especialidadsArrayList.get(position).getDescripcionEspecialidad());
+
+        Bundle args = getArguments();
+        if (args != null) {
+            int position = args.getInt("position");
+            TxtIDEspecialidadEdit.getEditText().setText(ListaEspecialidadAdministradorFragment.especialidadsArrayList.get(position).getId_Especialidad());
+            txtEspecialidad.getEditText().setText(ListaEspecialidadAdministradorFragment.especialidadsArrayList.get(position).getNombreEspecialidad());
+            txtMultiLine.setText(ListaEspecialidadAdministradorFragment.especialidadsArrayList.get(position).getDescripcionEspecialidad());
+        }
 
 
         b_cancelarEspecialidad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                fragmentManager.popBackStack();
+
             }
         });
 
@@ -75,9 +92,6 @@ public class ActualizarEspecialidad extends AppCompatActivity {
 
             }
         });
-
-
-
     }
 
     private void ActualizarDatos() {
@@ -106,11 +120,11 @@ public class ActualizarEspecialidad extends AppCompatActivity {
         } else {
             txtMultiLine.setError(null);
         }
-        final ProgressDialog progressDialog = new ProgressDialog(this);
+        final ProgressDialog progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Cargando");
 
         if (IDEspecialidad.isEmpty()){
-            Toast.makeText(this,"ingrese ID Especialidad",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(),"ingrese ID Especialidad",Toast.LENGTH_SHORT).show();
             return;
         }else {
             progressDialog.show();
@@ -121,16 +135,16 @@ public class ActualizarEspecialidad extends AppCompatActivity {
                     String valor=response.trim();
 
                     if (valor.equalsIgnoreCase("datos actualizados")) {
-                        Toast.makeText(ActualizarEspecialidad.this, "Especialidad Actualizada", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Especialidad Actualizada", Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
 
+                        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                        fragmentManager.popBackStack();
 
-
-                   startActivity(new Intent(ActualizarEspecialidad.this, AdministradorMenu.class));
 
 
                     } else {
-                        Toast.makeText(ActualizarEspecialidad.this, valor, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), valor, Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
 
                     }
@@ -138,7 +152,7 @@ public class ActualizarEspecialidad extends AppCompatActivity {
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(ActualizarEspecialidad.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
                 }
             }){
@@ -153,10 +167,16 @@ public class ActualizarEspecialidad extends AppCompatActivity {
                     return params;
                 }
             };
-            RequestQueue requestQueue= Volley.newRequestQueue( ActualizarEspecialidad.this);
+            RequestQueue requestQueue= Volley.newRequestQueue( getActivity());
             requestQueue.add(request);
         }
     }
 
-
+    public static ActualizarEspecialidad_AdministradorFragment newInstance(int data) {
+        ActualizarEspecialidad_AdministradorFragment fragment = new ActualizarEspecialidad_AdministradorFragment();
+        Bundle args = new Bundle();
+        args.putInt("position", data);
+        fragment.setArguments(args);
+        return fragment;
+    }
 }

@@ -2,7 +2,6 @@ package com.example.gestioncitasparadise.actividades.uiAdministrador.Especialida
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -32,7 +31,6 @@ import com.android.volley.toolbox.Volley;
 import com.example.gestioncitasparadise.Adapter.AdapterEspecialidad;
 import com.example.gestioncitasparadise.R;
 import com.example.gestioncitasparadise.dto.Especialidad;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
@@ -49,6 +47,7 @@ public class ListaEspecialidadAdministradorFragment extends Fragment {
     AdapterEspecialidad adapter;
     public static ArrayList<Especialidad> especialidadsArrayList =new ArrayList<>();
     Especialidad especialidad;
+    FragmentManager fragmentManager;
     Button btnEliminar;
     String url="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/Mostrar_especialidad.php";
 
@@ -56,7 +55,7 @@ public class ListaEspecialidadAdministradorFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registrar_especialidad_administrador, container, false);
+        return inflater.inflate(R.layout.fragment_listar_especialidad_administrador, container, false);
 
 
 
@@ -67,8 +66,6 @@ public class ListaEspecialidadAdministradorFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.bottomNavigationViewAdministrador);
-        bottomNavigationView.setVisibility(View.VISIBLE);
 
         FloatingActionButton floatingActionButton = view.findViewById(R.id.floatbtnAgregarEspecialidad);
 
@@ -78,6 +75,7 @@ public class ListaEspecialidadAdministradorFragment extends Fragment {
                 AgregarEspecialdad();
             }
         });
+
 
         listView = view.findViewById(R.id.list_Especialidad);
         adapter=new AdapterEspecialidad(getActivity(),especialidadsArrayList);
@@ -99,16 +97,9 @@ public class ListaEspecialidadAdministradorFragment extends Fragment {
                     public void onClick(DialogInterface dialog, int i) {
                         switch (i){
                             case 0:
-
-
-                                Log.i("infoxxx","entrooo");
                                 Actualizar(position);
-
-                                //startActivity(new Intent(getActivity(), ActualizarEspecialidad_AdministradorFragment.class).putExtra("position",position));
                             break;
-
                             case 1:
-                                Log.i("infoxxx","entroooEliminar");
                                 Eliminar(especialidadsArrayList.get(position).getId_Especialidad());
                                 break;
                         }
@@ -128,11 +119,7 @@ public class ListaEspecialidadAdministradorFragment extends Fragment {
 
 
     private void AgregarEspecialdad() {
-        Log.i("infoxxx","entre");
         abrirFragmentoB();
-//        Intent intent = new Intent(getContext(), AgregarEspecialidad_AdministradorFragment.class);
-//        startActivity(intent);
-
     }
 
     private void Actualizar(int position) {
@@ -141,7 +128,7 @@ public class ListaEspecialidadAdministradorFragment extends Fragment {
 
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.nav_hostFragment_administrador, fragmentoActualizar); // Reemplaza "R.id.container" con el ID correcto del contenedor del Fragmento en tu diseño XML
+        fragmentTransaction.replace(R.id.fragment_container_Admin, fragmentoActualizar); // Reemplaza "R.id.container" con el ID correcto del contenedor del Fragmento en tu diseño XML
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
@@ -196,20 +183,11 @@ public class ListaEspecialidadAdministradorFragment extends Fragment {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-
-
-
                         String valor=response.trim();
-                        Log.i("infoxxx",valor);
                         if (valor.equalsIgnoreCase("datos eliminados")) {
                             Toast.makeText(getActivity(), "elimino correctamente", Toast.LENGTH_SHORT).show();
-                            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_hostFragment_administrador);
-                            navController.navigate(R.id.page_Registrar_especialidad);
 
-
-
-                           // startActivity(new Intent(getActivity(), AdministradorMenu.class));
-
+                            openFragment(new ListaEspecialidadAdministradorFragment());
 
                         } else {
                             Toast.makeText(getActivity(), "Error no se puede registrar", Toast.LENGTH_SHORT).show();
@@ -231,9 +209,6 @@ public class ListaEspecialidadAdministradorFragment extends Fragment {
 
                 Map<String,String>params=new HashMap<>();
                 params.put("id",id);
-
-
-
                 return params;
             }
 
@@ -245,11 +220,19 @@ public class ListaEspecialidadAdministradorFragment extends Fragment {
 
     public void abrirFragmentoB() {
         AgregarEspecialidad_AdministradorFragment fragmentB = new AgregarEspecialidad_AdministradorFragment();
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.nav_hostFragment_administrador, fragmentB);
+        fragmentTransaction.replace(R.id.fragment_container_Admin, fragmentB);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
+    }
+
+
+    private void openFragment(Fragment fragment) {
+        FragmentTransaction fragmentTransaction =getActivity().getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container_Admin, fragment); // Reemplaza "R.id.fragment_container_Admin" con el ID correcto del contenedor del fragmento en tu diseño XML
+        fragmentTransaction.commit();
+
     }
 
     public static ListaEspecialidadAdministradorFragment newInstance(String data) {

@@ -4,15 +4,16 @@
 
     <item
         android:id="@+id/paga_Historial"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Historial"/>
+        android:icon="@drawable/baseline_library_books_24"
+        android:title="@string/nav_Historial"/>
     <item
         android:id="@+id/page_Registrar_Doctor"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Doctores"/>
+        android:icon="@drawable/baseline_person_add_24"
+        android:title="@string/nav_Doctor"/>
     <item
         android:id="@+id/page_Registrar_especialidad"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Especialidades"/>
+        android:icon="@drawable/baseline_list_24"
+        android:title="@string/nav_Especialidad"/>
+
 
 </menu>

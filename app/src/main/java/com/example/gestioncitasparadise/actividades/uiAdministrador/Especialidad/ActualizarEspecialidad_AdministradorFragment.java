@@ -63,8 +63,7 @@ public class ActualizarEspecialidad_AdministradorFragment extends Fragment {
         txtMultiLine=view.findViewById(R.id.txtDescripcionEdit);
         b_EditEspecialidad=view.findViewById(R.id.btnEspecialidadEdit);
         b_cancelarEspecialidad = view.findViewById(R.id.btnCancelarEspecialidadEdit);
-        BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.bottomNavigationViewAdministrador);
-        bottomNavigationView.setVisibility(View.GONE);
+
 
 
         Bundle args = getArguments();

@@ -10,7 +10,7 @@
         android:id="@+id/txtBienvenidos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido"
+        android:text="@string/Bienvenido"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Correo electronico" />
+                android:background="@android:color/transparent"
+                android:hint="@string/Correo" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -63,7 +64,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Contraseña"
+                android:background="@android:color/transparent"
+                android:hint="@string/Contraseña"
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -76,7 +78,7 @@
             android:clickable="true"
             android:onClick="CambiarContraseña"
             android:padding="5dp"
-            android:text="Haz olvidado tu contraseña"
+            android:text="@string/OlvidarContraseña"
             android:textColor="#2196F3"
             android:textSize="16sp"
             android:textStyle="normal"
@@ -98,7 +100,8 @@
         android:layout_height="54dp"
         android:layout_weight="1"
         android:onClick="login"
-        android:text="Iniciar session"
+        android:text="@string/IniciarSession"
+        android:backgroundTint="@color/btnColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -112,7 +115,8 @@
         android:layout_height="54dp"
         android:layout_weight="1"
         android:onClick="procesoRegistrar"
-        android:text="Registrate"
+        android:text="@string/registrar"
+        android:backgroundTint="@color/btnColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

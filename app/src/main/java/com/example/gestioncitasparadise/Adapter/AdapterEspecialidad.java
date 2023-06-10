@@ -19,6 +19,7 @@ public class AdapterEspecialidad extends ArrayAdapter {
     Context context;
     List<Especialidad>especialidadsLista;
 
+
     public AdapterEspecialidad(@NonNull Context context, List<Especialidad>especialidadsLista) {
         super(context, R.layout.lista_especialidad,especialidadsLista);
     this.context=context;
@@ -27,10 +28,8 @@ public class AdapterEspecialidad extends ArrayAdapter {
 
     public View getView(int position, @NonNull View Context , ViewGroup resource) {
         View view= LayoutInflater.from(resource.getContext()).inflate(R.layout.lista_especialidad,null,true);
-
         TextView txtEspecialidad=view.findViewById(R.id.txtNombreEspecialidad);
         TextView txtDescripcion=view.findViewById(R.id.txtDescripcionEspecialidad);
-
         txtEspecialidad.setText(especialidadsLista.get(position).getNombreEspecialidad());
         txtDescripcion.setText(especialidadsLista.get(position).getDescripcionEspecialidad());
         return view;

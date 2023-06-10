@@ -38,7 +38,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="10dp"
-                    android:text="Agregar Nueva Especialidad"
+                    android:text="@string/AgregarEspecialidad"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -59,7 +59,8 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:hint="Ingrese Especialdiad" />
+                            android:background="@android:color/transparent"
+                            android:hint="@string/Especialidad" />
 
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -70,7 +71,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingTop="30dp"
-                        android:text="Descripcion" />
+                        android:text="@string/Descripcion" />
 
 
                     <EditText
@@ -97,13 +98,16 @@
                         android:id="@+id/btnCancelarEspecialidad"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cancelar" />
+                        android:backgroundTint="@color/btnColor"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/Cancelar" />
 
                     <Button
                         android:id="@+id/btnAgregarEspecialidad"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Agregar" />
+                        android:backgroundTint="@color/btnColor"
+                        android:text="@string/Agregar" />
                 </LinearLayout>
 
             </LinearLayout>

@@ -1,5 +1,47 @@
 <resources>
-    <string name="app_name">GestionCitasParadise</string>
+    <string name="app_name">Paradise</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="version">v.1</string>
+    <string name="Bienvenido">Bienvenido</string>
+    <string name="Correo">Correo electronico(*)</string>
+    <string name="Contraseña">Contraseña(*)</string>
+    <string name="OlvidarContraseña">¿Has olvidado tu contraseña?</string>
+    <string name="IniciarSession">Iniciar Sesión</string>
+    <string name="registrar">Registrate</string>
+    <string name="Nocuenta">¿No tienes una cuenta?</string>
+    <string name="Restablecer">Restablecer Contraseña</string>
+    <string name="dni">DNI(*)</string>
+    <string name="nuevaContraseña">Nueva Contraseña</string>
+    <string name="CabmiarContraseña">Cambiar Contraseña</string>
+    <string name="RegistrarDatos">Registrar Datos</string>
+    <string name="Nombre">Nombre Completo (*)</string>
+    <string name="Apellido">Apellido Completo(*)</string>
+    <string name="telefono">Telefono(*)</string>
+    <string name="FechaNacimineto">Fecha de Nacimiento(*)</string>
+    <string name="Calendario">Calendario</string>
+    <string name="Direccion">Direcion</string>
+    <string name="Editar">Actualizar Especialidad</string>
+    <string name="id">ID</string>
+    <string name="Especialidad">Especialidad(*)</string>
+    <string name="Especialidades">Especialidades</string>
+    <string name="Descripcion">Descripcion(*)</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="Actualizar">Actualizar</string>
+    <string name="AgregarEspecialidad">Nueva Especialidad</string>
+    <string name="Agregar">Agregar</string>
+    <string name="noEspecialidad">No hay especialidad</string>
+    <string name="nav_Especialidad">Especialidad</string>
+    <string name="nav_Doctor">Doctor</string>
+    <string name="nav_Historial">Historial</string>
+    <string name="nav_perfil">Perfil</string>
+    <string name="nav_help">Ayuda</string>
+    <string name="nav_cerrarsession">Cerrar Sesión</string>
+    <string name="Doctores">Doctores</string>
+    <string name="Generar">Generar</string>
+    <string name="registrarDoctor">Registrar Doctor</string>
+
+
 </resources>

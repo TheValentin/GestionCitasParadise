@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.RegistrarActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".actividades.uiAdministrador.Doctor.AgregarDoctor_adminFragment">
 
     <LinearLayout
         android:layout_width="384dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_gravity="center"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/imageView"
@@ -38,12 +35,12 @@
                     android:layout_height="34dp"
                     android:gravity="center"
                     android:paddingLeft="@dimen/pd_TextImpus"
-                    android:text="@string/RegistrarDatos"
+                    android:text="@string/registrarDoctor"
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtnombre"
+                    android:id="@+id/txtnombreDoctor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/pd_TextImpus">
@@ -56,7 +53,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtapellido"
+                    android:id="@+id/txtapellidoDoctor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/pd_TextImpus">
@@ -69,7 +66,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txttelefono"
+                    android:id="@+id/txttelefonoDoctor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/pd_TextImpus">
@@ -83,7 +80,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtdni"
+                    android:id="@+id/txtdniDoctor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
@@ -98,15 +95,21 @@
                         android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Seleccione una opción" />
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="horizontal">
 
-
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/txtfecha"
+                        android:id="@+id/txtcorreoDoctor"
                         android:layout_width="246dp"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/pd_TextImpus">
@@ -116,84 +119,41 @@
                             android:layout_width="213dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
-                            android:hint="@string/FechaNacimineto"/>
+                            android:hint="@string/Correo" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
+
+
                     <Button
-                        android:id="@+id/btnCalendario"
+                        android:id="@+id/btngenerarCorreoDoctor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/btnColor"
-
                         android:layout_weight="1"
-                        android:textSize="10dp"
-                        android:text="@string/Calendario" />
+
+                        android:backgroundTint="@color/btnColor"
+                        android:text="@string/Generar"
+                        android:textSize="10dp" />
                 </LinearLayout>
 
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtdireccion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/pd_TextImpus">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:hint="@string/Direccion" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtcorreo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/pd_TextImpus">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:hint="@string/Correo"
-                        android:inputType="textEmailAddress" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtcontraseñaRegistroUsuario"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="@dimen/pd_TextImpus">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:hint="@string/Contraseña"
-                        android:inputType="textPassword" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
                 <Button
-                    android:id="@+id/btnRegistrarRegistro"
+                    android:id="@+id/btnRegistrarRegistroDoctor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/btnColor"
 
                     android:padding="@dimen/pd_TextImpus"
-                    android:text="@string/registrar" />
+                    android:text="@string/Agregar" />
 
                 <Button
-                    android:id="@+id/btnInicios"
+                    android:id="@+id/btnCancelarDoctor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/btnColor"
 
                     android:onClick="procesoIniciar"
                     android:padding="@dimen/pd_TextImpus"
-                    android:text="@string/IniciarSession" />
+                    android:text="@string/Cancelar" />
 
 
             </LinearLayout>
@@ -204,5 +164,4 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
-
+</FrameLayout>

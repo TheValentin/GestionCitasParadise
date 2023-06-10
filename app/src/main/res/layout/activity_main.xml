@@ -22,8 +22,9 @@
         android:id="@+id/button"
         android:layout_width="151dp"
         android:layout_height="54dp"
+        android:backgroundTint="@color/btnColor"
         android:onClick="procesoIniciar"
-        android:text="Iniciar Session"
+        android:text="@string/IniciarSession"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +45,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="¿No tienes una cuenta?" />
+            android:text="@string/Nocuenta" />
 
         <TextView
             android:id="@+id/textView2"
@@ -53,7 +54,7 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:onClick="procesoRegistrar"
-            android:text="Registrate" />
+            android:text="@string/registrar" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

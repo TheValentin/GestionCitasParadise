@@ -54,8 +54,7 @@ public class AgregarEspecialidad_AdministradorFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.bottomNavigationViewAdministrador);
-        bottomNavigationView.setVisibility(View.GONE);
+
 
 
         txtEspecialidad=view.findViewById(R.id.TxtEspecialidad);
@@ -117,6 +116,7 @@ public class AgregarEspecialidad_AdministradorFragment extends Fragment {
                         Toast.makeText(getActivity(), "Especialidad Registrada", Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
 
+                        //retrocede al fragmento
                         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                         fragmentManager.popBackStack();
 

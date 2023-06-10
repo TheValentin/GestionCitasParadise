@@ -1,13 +1,20 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.GestionCitasParadise" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.GestionCitasParadise" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:statusBarColor">@color/celeste</item>
+
     </style>
 
-    <style name="Theme.GestionCitasParadise" parent="Base.Theme.GestionCitasParadise" />
+    <style name="Theme.GestionCitasParadise" parent="Base.Theme.GestionCitasParadise">
 
-    <style name="MiEstiloBoton" parent="Widget.AppCompat.Button">
-        <item name="android:background">@color/mi_color_personalizado</item>
+    </style>
+
+    <style name="ThemeOverlay.AppCompat.navTheme">
+        <item name="colorPrimary">@color/white</item>
     </style>
 </resources>

@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/paga_datos"
+        android:id="@+id/paga_datos_paciente"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="Datos"/>
     <item
-        android:id="@+id/page_reserva"
+        android:id="@+id/page_reserva_paciente"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="Reserva"/>
     <item
-        android:id="@+id/page_historial"
+        android:id="@+id/page_historial_paciente"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="Historial"/>
 

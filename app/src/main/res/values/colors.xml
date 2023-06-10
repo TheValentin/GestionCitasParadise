@@ -2,5 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="mi_color_personalizado">#24A9FE</color>
+    <color name="celeste">#24A9FE</color>
+    <color name="mi_color_personalizado2">#AEE2FF</color>
+    <color name="btnColor">#4C7EFF </color>
 </resources>

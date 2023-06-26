@@ -74,35 +74,35 @@
 
                     <TextView
                         android:id="@+id/txtDniDoctorDetalle"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/Especialidades"
                         android:textSize="16dp" />
 
                     <TextView
                         android:id="@+id/txtTelefonoDoctorDetalle"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/Especialidades"
                         android:textSize="16dp" />
 
                     <TextView
                         android:id="@+id/txtdireccionDoctorDetalle"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/Especialidades"
                         android:textSize="16dp" />
 
                     <TextView
                         android:id="@+id/txtEmailDoctorDetalle"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/Especialidades"
                         android:textSize="16dp" />
 
                     <TextView
                         android:id="@+id/txtDistritoDoctorDetalle"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/Especialidades"
                         android:textSize="16dp" />

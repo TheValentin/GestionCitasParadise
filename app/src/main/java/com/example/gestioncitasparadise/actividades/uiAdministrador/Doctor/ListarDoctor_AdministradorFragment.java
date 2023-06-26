@@ -44,7 +44,6 @@ import java.util.TimerTask;
 public class ListarDoctor_AdministradorFragment extends Fragment implements MetodosCrud {
 
     ListView listView;
-    private Timer timer;
     AdapterDoctor adapter;
     public static ArrayList<Doctor> DoctorArrayList =new ArrayList<>();
     Doctor doctor;
@@ -55,6 +54,8 @@ public class ListarDoctor_AdministradorFragment extends Fragment implements Meto
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         FloatingActionButton floatingActionButton = view.findViewById(R.id.floatbtnAgregarDoctor);
+
+        Log.i("infoxxx","doctor");
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -180,11 +181,11 @@ public class ListarDoctor_AdministradorFragment extends Fragment implements Meto
                                     String especialidadNombre=object.getString("especialidadnombre");
                                     String nombreSede=object.getString("NombreSede");
                                     String NombreDistrito=object.getString("DistritoNombre");
-                                    doctor =new Doctor(id,NombreDistrito,nombreSede,nombre,apellido,dni,telefono,direccion,email,especialidadNombre);
-
+                                    String rol=object.getString("rol");
+                                    doctor =new Doctor(id,NombreDistrito,nombreSede,nombre,apellido,dni,telefono,direccion,email,especialidadNombre,rol);
                                     DoctorArrayList.add(doctor);
-                                    adapter.notifyDataSetChanged();
                                 }
+                                adapter.notifyDataSetChanged();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();

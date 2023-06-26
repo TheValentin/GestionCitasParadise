@@ -23,9 +23,16 @@ import com.example.gestioncitasparadise.R;
 import com.example.gestioncitasparadise.actividades.AdministradorMenu;
 import com.example.gestioncitasparadise.actividades.DoctorMenu;
 import com.example.gestioncitasparadise.actividades.pacienteMenu;
+import com.example.gestioncitasparadise.dto.Doctor;
+import com.example.gestioncitasparadise.dto.Paciente;
 import com.example.gestioncitasparadise.encriptacion;
 import com.google.android.material.textfield.TextInputLayout;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,7 +40,6 @@ public class IniciarSessionActivity extends AppCompatActivity {
 
     private TextInputLayout txtUsuario, txtContraseña;
     encriptacion encriptacion  = new encriptacion();
-
 
     String url = "https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/Login.php";
 
@@ -99,6 +105,10 @@ public class IniciarSessionActivity extends AppCompatActivity {
                             String valor=response.trim();
                             SharedPreferences sharedPreferences = getSharedPreferences("mis_preferencias", Context.MODE_PRIVATE);
                             SharedPreferences.Editor editor = sharedPreferences.edit();
+                            String usuario = txtUsuario.getEditText().getText().toString();
+                            editor.putString("usuario", usuario);
+                            editor.putString("contraseña", encryptedPassword);
+                            editor.apply();
 
 
                             if (valor.equalsIgnoreCase("inicio de sesión exitoso como administrador")) {
@@ -108,8 +118,9 @@ public class IniciarSessionActivity extends AppCompatActivity {
                                 txtContraseña.getEditText().setText("");
 
 
+
                                 editor.putBoolean("isLoggedAdmin", true); // Estado de inicio de sesión para el rol de administrador
-                                // Repite este paso para los otros roles (por ejemplo, "isLoggedPaciente", "isLoggedDoctor")
+
 
                                 startActivity(new Intent(IniciarSessionActivity.this,AdministradorMenu.class));
 
@@ -124,6 +135,7 @@ public class IniciarSessionActivity extends AppCompatActivity {
 
 
                                 editor.putBoolean("isLoggedPaciente", true); // Estado de inicio de sesión para el rol de administrador
+                                editor.apply();
                                 // Repite este paso para los otros roles (por ejemplo, "isLoggedPaciente", "isLoggedDoctor")
 
 
@@ -134,15 +146,15 @@ public class IniciarSessionActivity extends AppCompatActivity {
                             } else if (valor.equalsIgnoreCase("inicio de sesión exitoso como doctor")) {
                                 // Acciones para un inicio de sesión exitoso como empleado
 
-                                txtUsuario.getEditText().setText("");
-                                txtContraseña.getEditText().setText("");
 
                                 editor.putBoolean("isLoggedDoctor", true); // Estado de inicio de sesión para el rol de administrador
                                 // Repite este paso para los otros roles (por ejemplo, "isLoggedPaciente", "isLoggedDoctor")
+                                editor.apply();
 
 
 
                                 Intent intent = new Intent(IniciarSessionActivity.this,DoctorMenu.class);
+                               // intent.putExtras(bundle);
                                 startActivity(intent);
 
 
@@ -173,4 +185,6 @@ public class IniciarSessionActivity extends AppCompatActivity {
             requestQueue.add(request);
         }
     }
+
+
 }

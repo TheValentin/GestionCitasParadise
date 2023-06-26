@@ -14,13 +14,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.gestioncitasparadise.R;
 import com.example.gestioncitasparadise.actividades.uiAdministrador.Especialidad.ListaEspecialidadAdministradorFragment;
-import com.example.gestioncitasparadise.actividades.uiAdministrador.PerfilFragment;
+import com.example.gestioncitasparadise.actividades.uiAdministrador.Historial_AdministradorFragment;
+import com.example.gestioncitasparadise.actividades.uiAdministrador.PerfilAdminFragment;
 import com.example.gestioncitasparadise.actividades.uiAdministrador.Doctor.ListarDoctor_AdministradorFragment;
 import com.example.gestioncitasparadise.actividades.uiPaciente.HistorialFragment;
 import com.example.gestioncitasparadise.login.IniciarSessionActivity;
@@ -64,7 +64,7 @@ public class AdministradorMenu extends AppCompatActivity implements NavigationVi
 
                 if (itemID==R.id.paga_Historial){
                     toolbar.setTitle(R.string.nav_Historial);
-                    openFragment(new HistorialFragment());
+                    openFragment(new Historial_AdministradorFragment());
                     return true;
                 }else if (itemID==R.id.page_Registrar_Doctor){
                     toolbar.setTitle(R.string.nav_Doctor);
@@ -81,7 +81,7 @@ public class AdministradorMenu extends AppCompatActivity implements NavigationVi
             }
         });
         fragmentManager = getSupportFragmentManager();
-        openFragment(new HistorialFragment());
+        openFragment(new Historial_AdministradorFragment());
 
     }
 
@@ -92,7 +92,7 @@ public class AdministradorMenu extends AppCompatActivity implements NavigationVi
 
         if (itemID==R.id.nav_drawer_home){
             toolbar.setTitle(R.string.nav_perfil);
-            openFragment(new PerfilFragment());
+            openFragment(new PerfilAdminFragment());
         }else if (itemID==R.id.nav_drawer_casa){
             toolbar.setTitle(R.string.nav_help);
             Toast.makeText(this,"Home",Toast.LENGTH_SHORT).show();

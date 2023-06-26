@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actividades.uiPaciente.ReservaFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Reserva tu cita"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10sp"
+
+                android:text="Eligue tu Especialidad a consultar" />
+
+            <ListView
+                android:id="@+id/list_EspecialidadReservaPaciente"
+                android:layout_width="371dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:nestedScrollingEnabled="true" />
+
+
+            <TextView
+                android:id="@+id/textElegirDcotor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10sp"
+                android:visibility="gone"
+                android:text="Eligue tu Doctor a consultar" />
+
+            <ListView
+                android:id="@+id/list_DoctorReservaPaciente"
+                android:layout_width="371dp"
+                android:layout_height="258dp"
+                android:layout_gravity="center"
+                android:nestedScrollingEnabled="true" />
+
+
+
+            <TextView
+                android:id="@+id/textElegirfecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:paddingLeft="10sp"
+                android:text="Eligue La fecha de reserva" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtfechaConsultaReservaPaciente"
+                    android:layout_width="246dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:inputType="none"
+                    android:padding="@dimen/pd_TextImpus">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="213dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:background="@android:color/transparent"
+                        android:hint="Fecha"
+                        android:inputType="none"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/btncalendarioReserva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btnColor"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:textSize="10dp"
+                    android:text="@string/Calendario" />
+            </LinearLayout>
+
+
+            <ListView
+                android:id="@+id/list_HorarioReservaPaciente"
+                android:layout_width="371dp"
+                android:layout_height="258dp"
+                android:layout_gravity="center"
+                android:nestedScrollingEnabled="true">
+
+            </ListView>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/guardarReserva"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/btnColor"
+                    android:text="Registrar Cita"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txt_diaSelecionadoReservar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

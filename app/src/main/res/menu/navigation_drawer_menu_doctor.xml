@@ -11,6 +11,13 @@
                 android:title="@string/nav_perfil">
             </item>
             <item
+                android:id="@+id/nav_drawer_horario_doctor"
+                android:icon="@drawable/baseline_access_time_24"
+                android:title="@string/nav_horarios">
+            </item>
+
+
+            <item
                 android:id="@+id/nav_drawer_casa_doctor"
                 android:icon="@drawable/baseline_help_24"
                 android:title="@string/nav_help">

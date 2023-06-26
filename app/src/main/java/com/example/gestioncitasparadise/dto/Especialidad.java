@@ -12,7 +12,6 @@ public class Especialidad {
         NombreEspecialidad = nombreEspecialidad;
         DescripcionEspecialidad = descripcionEspecialidad;
     }
-
     public String getId_Especialidad() {
         return Id_Especialidad;
     }
@@ -36,4 +35,9 @@ public class Especialidad {
     public void setDescripcionEspecialidad(String descripcionEspecialidad) {
         DescripcionEspecialidad = descripcionEspecialidad;
     }
+    @Override
+    public String toString() {
+        return NombreEspecialidad;
+    }
+
 }

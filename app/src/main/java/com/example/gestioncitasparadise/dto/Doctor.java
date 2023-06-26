@@ -29,7 +29,7 @@ public class Doctor {
         this.NombreEspecialidad = nombreEspecialidad;
     }
 
-    public Doctor(int id_doctor, String NombreDistrito, String NombreSede, String nombre_doctor, String apellido_doctor, String dni_doctor, String telefono_doctor, String direccion_doctor, String email_doctor,String nombreEspecialidad) {
+    public Doctor(int id_doctor, String NombreDistrito, String NombreSede, String nombre_doctor, String apellido_doctor, String dni_doctor, String telefono_doctor, String direccion_doctor, String email_doctor,String nombreEspecialidad,String rol) {
         this.id_doctor = id_doctor;
         this.NombreDistrito = NombreDistrito;
         this.NombreSede = NombreSede;
@@ -40,6 +40,7 @@ public class Doctor {
         this.direccion_doctor = direccion_doctor;
         this.email_doctor = email_doctor;
         this.NombreEspecialidad = nombreEspecialidad;
+        this.rol=rol;
     }
 
     public String getNombreDistrito() {

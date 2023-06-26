@@ -96,10 +96,10 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView"
+                android:id="@+id/autoCompleteTextViewAgregarDoctor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Seleccione una opción" />
+                android:hint="Seleccione una especialidad" />
 
 
                 <LinearLayout

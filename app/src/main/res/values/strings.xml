@@ -22,7 +22,7 @@
     <string name="telefono">Telefono(*)</string>
     <string name="FechaNacimineto">Fecha de Nacimiento(*)</string>
     <string name="Calendario">Calendario</string>
-    <string name="Direccion">Direcion</string>
+    <string name="Direccion">Direccion</string>
     <string name="Editar">Actualizar Especialidad</string>
     <string name="id">ID</string>
     <string name="Especialidad">Especialidad(*)</string>
@@ -42,6 +42,18 @@
     <string name="Doctores">Doctores</string>
     <string name="Generar">Generar</string>
     <string name="registrarDoctor">Registrar Doctor</string>
+
+
+    <string name="nav_horarios">Horarios</string>
+
+    <string name="paciente">Paciente</string>
+    <string name="Acercadeti">Acerca de ti</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="Dni">Dni</string>
+    <string name="fecha">Cumpleaños</string>
+    <string name="Telefono">Telefono</string>
+    <string name="editar">Editar</string>
 
 
 </resources>

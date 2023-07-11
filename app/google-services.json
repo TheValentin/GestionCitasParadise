@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "272728977155",
+    "project_id": "appnotificaciones-5d989",
+    "storage_bucket": "appnotificaciones-5d989.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272728977155:android:66bf15926a8b52f6ce8336",
+        "android_client_info": {
+          "package_name": "com.example.gestioncitasparadise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272728977155-dlmkfsl3g8j2v99enfohb4dine6m45jp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUSterNUAkGwa8SOw0WkysX_nCbNfm3aQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272728977155-dlmkfsl3g8j2v99enfohb4dine6m45jp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -18,19 +18,19 @@ import java.util.List;
 public class AdapterSedes extends ArrayAdapter {
     Context context;
 
-    List<Sedes> SedesLista;
+    List<Sedes> sedesLista;
 
 
-    public AdapterSedes(@NonNull Context context, List<Sedes> SedesLista) {
-        super(context, R.layout.lista_sedes,SedesLista);
+    public AdapterSedes(@NonNull Context context, List<Sedes> sedesLista) {
+        super(context, R.layout.lista_sedes,sedesLista);
         this.context=context;
-        this.SedesLista=SedesLista;
+        this.sedesLista=sedesLista;
     }
 
-    public View getView(int position, @NonNull View Context , ViewGroup resource) {
+    public View getView(int position, @NonNull View context , ViewGroup resource) {
         View view= LayoutInflater.from(resource.getContext()).inflate(R.layout.lista_sedes,null,true);
         TextView txtNombreSede=view.findViewById(R.id.txtlistaSedes);
-        txtNombreSede.setText(SedesLista.get(position).getNombreSede());
+        txtNombreSede.setText(sedesLista.get(position).getNombreSede());
         return view;
     }
 

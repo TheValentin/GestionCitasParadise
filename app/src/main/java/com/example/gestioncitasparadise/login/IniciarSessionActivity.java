@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
@@ -21,18 +20,11 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.gestioncitasparadise.R;
 import com.example.gestioncitasparadise.actividades.AdministradorMenu;
-import com.example.gestioncitasparadise.actividades.DoctorMenu;
+import com.example.gestioncitasparadise.actividades.doctorMenu;
 import com.example.gestioncitasparadise.actividades.pacienteMenu;
-import com.example.gestioncitasparadise.dto.Doctor;
-import com.example.gestioncitasparadise.dto.Paciente;
 import com.example.gestioncitasparadise.encriptacion;
 import com.google.android.material.textfield.TextInputLayout;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -153,7 +145,7 @@ public class IniciarSessionActivity extends AppCompatActivity {
 
 
 
-                                Intent intent = new Intent(IniciarSessionActivity.this,DoctorMenu.class);
+                                Intent intent = new Intent(IniciarSessionActivity.this, doctorMenu.class);
                                // intent.putExtras(bundle);
                                 startActivity(intent);
 

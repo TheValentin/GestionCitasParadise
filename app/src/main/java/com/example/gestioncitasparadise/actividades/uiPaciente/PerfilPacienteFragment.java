@@ -1,6 +1,5 @@
 package com.example.gestioncitasparadise.actividades.uiPaciente;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.gestioncitasparadise.R;
-import com.example.gestioncitasparadise.actividades.DoctorMenu;
 import com.example.gestioncitasparadise.actividades.pacienteMenu;
 
 

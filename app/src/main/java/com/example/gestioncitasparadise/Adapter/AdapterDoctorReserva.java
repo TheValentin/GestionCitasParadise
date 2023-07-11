@@ -9,25 +9,21 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
-
 import com.example.gestioncitasparadise.R;
 import com.example.gestioncitasparadise.dto.Doctor;
-
 import java.util.List;
 
 public class AdapterDoctorReserva extends ArrayAdapter {
+  Context context;
+  private int selectedItem = -1;
+  List<Doctor> DoctorLista;
 
-    Context context;
-    private int selectedItem = -1;
-    List<Doctor> DoctorLista;
-
-    public AdapterDoctorReserva(@NonNull Context context, List<Doctor>DoctorLista) {
-        super(context, R.layout.lista_doctor_reserva_paciente,DoctorLista);
-        this.context=context;
-        this.DoctorLista=DoctorLista;
+  public AdapterDoctorReserva(@NonNull Context context, List<Doctor> DoctorLista) {
+      super(context, R.layout.lista_doctor_reserva_paciente, DoctorLista);
+      this.context=context;
+      this.DoctorLista=DoctorLista;
 
     }
     @Override

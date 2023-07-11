@@ -1,0 +1,8 @@
+
+E
+java:S3740"/Provide the parametrized type for this generic.(ύ¦“†
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(έξ‰Λϋÿÿÿÿ
+t
+java:S2638"_Fix the incompatibility of the annotation @NonNull to honor @Nullable of the overridden method.(υ™βp
+O
+java:S1161":Add the "@Override" annotation above this method signature(υ™βp

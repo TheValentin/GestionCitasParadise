@@ -1,6 +1,5 @@
 package com.example.gestioncitasparadise.actividades.uiDoctor;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,8 +12,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.gestioncitasparadise.R;
-import com.example.gestioncitasparadise.actividades.DoctorMenu;
-import com.example.gestioncitasparadise.login.IniciarSessionActivity;
+import com.example.gestioncitasparadise.actividades.doctorMenu;
 
 
 public class PerfilDoctorFragment extends Fragment {
@@ -22,7 +20,7 @@ public class PerfilDoctorFragment extends Fragment {
 
     TextView nombredoctor,email,nombre,apellido, dni, telefono, direccion,especialidad;
 
-    int codigo=DoctorMenu.DoctorArrayList.get(0).getId_doctor();
+    int codigo= doctorMenu.DoctorArrayList.get(0).getId_doctor();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,14 +45,14 @@ public class PerfilDoctorFragment extends Fragment {
         especialidad=view.findViewById(R.id.txtEspecialidadDoctorPerfil);
         //mostrar en pantalla
 
-        nombredoctor.setText(DoctorMenu.DoctorArrayList.get(0).getNombre_doctor().toString());
-        email.setText(DoctorMenu.DoctorArrayList.get(0).getEmail_doctor().toString());
-        nombre.setText(DoctorMenu.DoctorArrayList.get(0).getNombre_doctor().toString());
-        apellido.setText(DoctorMenu.DoctorArrayList.get(0).getApellido_doctor().toString());
-        dni.setText(DoctorMenu.DoctorArrayList.get(0).getDni_doctor().toString());
-        telefono.setText(DoctorMenu.DoctorArrayList.get(0).getTelefono_doctor().toString());
-        direccion.setText(DoctorMenu.DoctorArrayList.get(0).getDireccion_doctor().toString());
-        especialidad.setText(DoctorMenu.DoctorArrayList.get(0).getNombreEspecialidad().toString());
+        nombredoctor.setText(doctorMenu.DoctorArrayList.get(0).getNombre_doctor().toString());
+        email.setText(doctorMenu.DoctorArrayList.get(0).getEmail_doctor().toString());
+        nombre.setText(doctorMenu.DoctorArrayList.get(0).getNombre_doctor().toString());
+        apellido.setText(doctorMenu.DoctorArrayList.get(0).getApellido_doctor().toString());
+        dni.setText(doctorMenu.DoctorArrayList.get(0).getDni_doctor().toString());
+        telefono.setText(doctorMenu.DoctorArrayList.get(0).getTelefono_doctor().toString());
+        direccion.setText(doctorMenu.DoctorArrayList.get(0).getDireccion_doctor().toString());
+        especialidad.setText(doctorMenu.DoctorArrayList.get(0).getNombreEspecialidad().toString());
 
 
     }

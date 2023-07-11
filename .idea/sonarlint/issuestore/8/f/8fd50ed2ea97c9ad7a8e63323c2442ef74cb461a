@@ -1,0 +1,30 @@
+
+>
+java:S1604I"(Make this anonymous inner class a lambda(ï›¡—
+g	java:S101%"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(æð›ïøÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­ƒÏ¨
+k	java:S116)"VRename this field "ImagenAtras" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çª©Õ
+g
+java:S1659("LDeclare "txtEspecialidad" and all following declarations on a separate line.(½²¯•ÿÿÿÿÿ
+p
+java:S1450)"ZRemove the "ImagenAtras" field and declare it as a local variable in the relevant methods.(çª©Õ
+{
+java:S1450("`Remove the "txtApellidoDoctor" field and declare it as a local variable in the relevant methods.(½²¯•ÿÿÿÿÿ
+|
+java:S1450("aRemove the "txtDirrecionDoctor" field and declare it as a local variable in the relevant methods.(½²¯•ÿÿÿÿÿ
+v
+java:S1450("[Remove the "txtDniDoctor" field and declare it as a local variable in the relevant methods.(½²¯•ÿÿÿÿÿ
+x
+java:S1450("]Remove the "txtEmailDoctor" field and declare it as a local variable in the relevant methods.(½²¯•ÿÿÿÿÿ
+y
+java:S1450("^Remove the "txtEspecialidad" field and declare it as a local variable in the relevant methods.(½²¯•ÿÿÿÿÿ
+y
+java:S1450("^Remove the "txtNombreDoctor" field and declare it as a local variable in the relevant methods.(½²¯•ÿÿÿÿÿ
+x
+java:S1450("]Remove the "txtSedesDoctor" field and declare it as a local variable in the relevant methods.(½²¯•ÿÿÿÿÿ
+{
+java:S1450("`Remove the "txtTelefonoDoctor" field and declare it as a local variable in the relevant methods.(½²¯•ÿÿÿÿÿ
+z
+java:S1450("_Remove the "txtdistritoDocto" field and declare it as a local variable in the relevant methods.(½²¯•ÿÿÿÿÿ
+u
+java:S1450("ZRemove the "txtidDoctor" field and declare it as a local variable in the relevant methods.(½²¯•ÿÿÿÿÿ

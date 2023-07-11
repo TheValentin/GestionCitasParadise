@@ -7,10 +7,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +32,7 @@ import com.example.gestioncitasparadise.Adapter.AdapterHorarioDoctor;
 import com.example.gestioncitasparadise.R;
 
 import com.example.gestioncitasparadise.actividades.pacienteMenu;
+import com.example.gestioncitasparadise.actividades.uiPaciente.CitasProgramadas.HistorialFragment;
 import com.example.gestioncitasparadise.dto.Doctor;
 import com.example.gestioncitasparadise.dto.Especialidad;
 import com.example.gestioncitasparadise.dto.Horarios;
@@ -61,7 +60,7 @@ public class ReservaFragment extends Fragment {
     Button b_guardar, b_calendario;
     AdapterEspecialidadReserva adapterEspecialidadReserva;
     AdapterDoctorReserva adapterDoctorReserva;
-    AdapterHorarioDoctor adapterHorarioDoctor;
+     AdapterHorarioDoctor adapterHorarioDoctor;
     public static ArrayList<Especialidad> especialidadsArrayList =new ArrayList<>();
     public static ArrayList<Doctor> DoctorArrayList= new ArrayList<>();
     public static ArrayList<Horarios> HorariosArrayList=new ArrayList<>();
@@ -323,7 +322,7 @@ public class ReservaFragment extends Fragment {
 
     }
 
-    private void ListardatosHorario(String id_Doctor, String Dia_semana ,String fecha){
+    private   void ListardatosHorario(String id_Doctor, String Dia_semana, String fecha){
         StringRequest request =new StringRequest(Request.Method.POST, urlHorarios,
                 new Response.Listener<String>() {
                     @Override

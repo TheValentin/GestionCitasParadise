@@ -55,8 +55,6 @@ public class ListarDoctor_AdministradorFragment extends Fragment implements Meto
         super.onViewCreated(view, savedInstanceState);
         FloatingActionButton floatingActionButton = view.findViewById(R.id.floatbtnAgregarDoctor);
 
-        Log.i("infoxxx","doctor");
-
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

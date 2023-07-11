@@ -1,0 +1,49 @@
+
+|
+java:S2293æ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8Åâ˜–“1
+|
+java:S2293ž"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8Æâ˜–“1
+Œ
+java:S1319>"oThe type of "DoctorArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(þ¦îÌ8Æâ˜–“1
+n	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÙ°å8Æâ˜–“1
+J
+java:S1604a"(Make this anonymous inner class a lambda(“µ³Ðýÿÿÿÿ8Æâ˜–“1
+K
+java:S1604º"(Make this anonymous inner class a lambda(±æÿÚýÿÿÿÿ8Çâ˜–“1
+K
+java:S1604Ü"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8Çâ˜–“1
+K
+java:S1604û"(Make this anonymous inner class a lambda(±æÿÚýÿÿÿÿ8Çâ˜–“1
+K
+java:S1604”"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8Çâ˜–“1
+x
+java:S1104>"[Make DoctorArrayList a static final constant or non-public and provide accessors if needed.(þ¦îÌ8Çâ˜–“1
+{
+java:S1104?"YMake HorariosArray a static final constant or non-public and provide accessors if needed.(…´ô¯ùÿÿÿÿ8Çâ˜–“1
+R
+java:S1444>"5Make this "public static DoctorArrayList" field final(þ¦îÌ8Çâ˜–“1
+U
+java:S1444?"3Make this "public static HorariosArray" field final(…´ô¯ùÿÿÿÿ8Çâ˜–“1
+i	java:S1016"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¶Ï ¼8ä…›š“1
+r	java:S116C"VRename this field "contraseÃ±a" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹æªí8ðâ˜–“1
+w
+java:S3008>"ZRename this field "DoctorArrayList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(þ¦îÌ8ðâ˜–“1
+z
+java:S3008?"XRename this field "HorariosArray" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…´ô¯ùÿÿÿÿ8ðâ˜–“1
+:
+java:S2386>"Make this member "protected".(þ¦îÌ8÷â˜–“1
+?
+java:S2386?"Make this member "protected".(…´ô¯ùÿÿÿÿ8÷â˜–“1
+X	java:S125g"<This block of commented-out lines of code should be removed.(Î·…§8‚ã˜–“1
+]	java:S125k"<This block of commented-out lines of code should be removed.(ÒûŸÐüÿÿÿÿ8ƒã˜–“1
+X	java:S125o"<This block of commented-out lines of code should be removed.(®¼¨8„ã˜–“1
+m
+java:S1874˜"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ8‡ã˜–“1
+k	java:S100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­†ì¥8ã˜–“1
+^
+java:S1854ƒ";Remove this useless assignment to local variable "message".(Ñž—Ýþÿÿÿÿ8’ã˜–“1
+O
+java:S1481ƒ",Remove this unused "message" local variable.(Ñž—Ýþÿÿÿÿ8“ã˜–“1
+Y	java:S125—"<This block of commented-out lines of code should be removed.(“èØù8”ã˜–“1
+?
+java:S1116¤"Remove this empty statement.(ôŸŽìúÿÿÿÿ8”ã˜–“1

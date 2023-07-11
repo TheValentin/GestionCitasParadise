@@ -1,0 +1,21 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿â·‘8©Î«š“1
+r	java:S116"VRename this field "cumpleaÃ±os" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™©Çè8«Î«š“1
+_
+java:S1659"BDeclare "email" and all following declarations on a separate line.(™©Çè8ÀÎ«š“1
+h
+java:S1858,"K"getNombrePaciente" returns a string, there's no need to call "toString()".(îÛºÎ8ÎÎ«š“1
+g
+java:S1858-"J"getEmailPaciente" returns a string, there's no need to call "toString()".(¢ôÛû8ÏÎ«š“1
+m
+java:S1858."K"getNombrePaciente" returns a string, there's no need to call "toString()".(Ú©î£øÿÿÿÿ8ÏÎ«š“1
+o
+java:S1858/"M"getApellidoPaciente" returns a string, there's no need to call "toString()".(œ¯ª şÿÿÿÿ8ÏÎ«š“1
+e
+java:S18580"H"getDniPaciente" returns a string, there's no need to call "toString()".(õ¡ÿ8ĞÎ«š“1
+j
+java:S18581"M"getTelefonoPaciente" returns a string, there's no need to call "toString()".(§Ê8ĞÎ«š“1
+l
+java:S18582"J"getFechaPaciente" returns a string, there's no need to call "toString()".(Â£Äñûÿÿÿÿ8ĞÎ«š“1
+p
+java:S18583"N"getDireccionPaciente" returns a string, there's no need to call "toString()".(¼Ïªæùÿÿÿÿ8ÑÎ«š“1

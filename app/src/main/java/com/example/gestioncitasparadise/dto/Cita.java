@@ -1,7 +1,7 @@
 package com.example.gestioncitasparadise.dto;
 
 public class Cita {
-    String id_cita, id_paciente, id_horario, fecha, Estado;
+    String id_cita, id_paciente, id_horario, fecha, Estado, id_doctor;
 
     String dia_semana, hora_inicio, hora_fin, nombreDoctor, apellidoDoctor, nombreEspecialidad;
 
@@ -10,29 +10,6 @@ public class Cita {
     public Cita() {
 
     }
-
-    public Cita(String id_cita, String id_paciente, String id_horario, String fecha, String estado) {
-        this.id_cita = id_cita;
-        this.id_paciente = id_paciente;
-        this.id_horario = id_horario;
-        this.fecha = fecha;
-        Estado = estado;
-    }
-
-    public Cita(String id_cita, String id_paciente, String id_horario, String fecha, String estado, String dia_semana, String hora_inicio, String hora_fin, String nombreDoctor, String apellidoDoctor, String nombreEspecialidad) {
-        this.id_cita = id_cita;
-        this.id_paciente = id_paciente;
-        this.id_horario = id_horario;
-        this.fecha = fecha;
-        Estado = estado;
-        this.dia_semana = dia_semana;
-        this.hora_inicio = hora_inicio;
-        this.hora_fin = hora_fin;
-        this.nombreDoctor = nombreDoctor;
-        this.apellidoDoctor = apellidoDoctor;
-        this.nombreEspecialidad = nombreEspecialidad;
-    }
-
     public Cita(String id_cita, String fecha, String dia_semana,String hora_inicio, String hora_fin, String nombrePaciente, String apellidoPaciente, String telefonoPaciente, String Estado) {
         this.id_cita = id_cita;
         this.fecha = fecha;
@@ -43,9 +20,10 @@ public class Cita {
         this.apellidoPaciente = apellidoPaciente;
         this.telefonoPaciente = telefonoPaciente;
         this.Estado=Estado;
+
     }
 
-    public Cita(String id_cita, String fecha, String dia_semana,String hora_inicio, String hora_fin, String nombreDoctor, String apellidoDoctor, String nombreEspecialidad) {
+    public Cita(String id_cita, String fecha, String dia_semana,String hora_inicio, String hora_fin, String nombreDoctor, String apellidoDoctor, String nombreEspecialidad, String id_doctor, String estado) {
         this.id_cita = id_cita;
         this.fecha = fecha;
         this.dia_semana = dia_semana;
@@ -54,6 +32,16 @@ public class Cita {
         this.nombreDoctor = nombreDoctor;
         this.apellidoDoctor = apellidoDoctor;
         this.nombreEspecialidad = nombreEspecialidad;
+        this.id_doctor=id_doctor;
+        this.Estado=estado;
+    }
+
+    public String getId_doctor() {
+        return id_doctor;
+    }
+
+    public void setId_doctor(String id_doctor) {
+        this.id_doctor = id_doctor;
     }
 
     public String getId_cita() {

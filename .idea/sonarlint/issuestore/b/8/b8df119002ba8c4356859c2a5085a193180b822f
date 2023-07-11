@@ -1,0 +1,75 @@
+
+|
+java:S2293•"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8ú²ÿ–“1
+|
+java:S2293Ì"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8û²ÿ–“1
+|
+java:S2293î"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8û²ÿ–“1
+“
+java:S13198"qThe type of "HorariosArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(Ù„¹äøÿÿÿÿ8û²ÿ–“1
+m	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÁ»•8ü²ÿ–“1
+r	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åê†Ãùÿÿÿÿ8ü²ÿ–“1
+s	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–õ«Âùÿÿÿÿ8ü²ÿ–“1
+s	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–õ«Âùÿÿÿÿ8ü²ÿ–“1
+s	java:S117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¨ë ûÿÿÿÿ8ü²ÿ–“1
+s	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æõÄÅûÿÿÿÿ8ü²ÿ–“1
+n	java:S117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷„Ä8ü²ÿ–“1
+n	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â™€Ë8ü²ÿ–“1
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò¬«‡8ü²ÿ–“1
+n	java:S117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôËçœ8ü²ÿ–“1
+n	java:S117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šœ°î8ü²ÿ–“1
+n	java:S117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šœ°î8ü²ÿ–“1
+n	java:S117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šœ°î8ü²ÿ–“1
+D
+java:S1604r"(Make this anonymous inner class a lambda(’á¯8ü²ÿ–“1
+K
+java:S1604‚"(Make this anonymous inner class a lambda(§´­üÿÿÿÿ8ü²ÿ–“1
+F
+java:S1604"(Make this anonymous inner class a lambda(à€”…8ü²ÿ–“1
+K
+java:S1604”"(Make this anonymous inner class a lambda(œûŒùÿÿÿÿ8ü²ÿ–“1
+K
+java:S1604¯"(Make this anonymous inner class a lambda(÷Ïëçúÿÿÿÿ8ü²ÿ–“1
+K
+java:S1604ï"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ8ü²ÿ–“1
+K
+java:S1604‹"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8ü²ÿ–“1
+K
+java:S1604¬"(Make this anonymous inner class a lambda(•Æ˜¼şÿÿÿÿ8ü²ÿ–“1
+K
+java:S1604Á"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8ü²ÿ–“1
+K
+java:S1604ß"(Make this anonymous inner class a lambda(Œ×âÑûÿÿÿÿ8ı²ÿ–“1
+K
+java:S1604ä"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8ı²ÿ–“1
+
+java:S11048"]Make HorariosArrayList a static final constant or non-public and provide accessors if needed.(Ù„¹äøÿÿÿÿ8ı²ÿ–“1
+Y
+java:S14448"7Make this "public static HorariosArrayList" field final(Ù„¹äøÿÿÿÿ8ı²ÿ–“1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(á…¬”úÿÿÿÿ8ÿ²ÿ–“1
+y	java:S1165"XRename this field "Dia_reservado" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ„«ºùÿÿÿÿ8ÿ³ÿ–“1
+u	java:S1167"TRename this field "id_Doctor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µà¿Æûÿÿÿÿ8ÿ³ÿ–“1
+s	java:S1167"RRename this field "id_cita" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µà¿Æûÿÿÿÿ8ÿ³ÿ–“1
+x	java:S116="WRename this field "b_calendario" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÎ…Ãÿÿÿÿÿ8ÿ³ÿ–“1
+u	java:S116="TRename this field "b_guardar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÎ…Ãÿÿÿÿÿ8ÿ³ÿ–“1
+v	java:S116="URename this field "b_cancelar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÎ…Ãÿÿÿÿÿ8ÿ³ÿ–“1
+~
+java:S30088"\Rename this field "HorariosArrayList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù„¹äøÿÿÿÿ8ÿ³ÿ–“1
+i
+java:S16595"GDeclare "txtDiaCita" and all following declarations on a separate line.(ˆ„«ºùÿÿÿÿ8„´ÿ–“1
+h
+java:S16597"FDeclare "id_Doctor" and all following declarations on a separate line.(µà¿Æûÿÿÿÿ8„´ÿ–“1
+h
+java:S1659="FDeclare "b_guardar" and all following declarations on a separate line.(şÎ…Ãÿÿÿÿÿ8„´ÿ–“1
+?
+java:S23868"Make this member "protected".(Ù„¹äøÿÿÿÿ8†´ÿ–“1
+p	java:S100í"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–õ«Âùÿÿÿÿ8¢´ÿ–“1
+k	java:S100¥"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôËçœ8ª´ÿ–“1
+Y
+java:S1874¨"6Remove this use of "ProgressDialog"; it is deprecated.(°ã¦şÿÿÿÿ8«´ÿ–“1
+Y
+java:S1874¨"6Remove this use of "ProgressDialog"; it is deprecated.(°ã¦şÿÿÿÿ8«´ÿ–“1
+P
+java:S1874©"2Remove this use of "setMessage"; it is deprecated.(Êü¹¡8«´ÿ–“1
+
+java:S1186á"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÆÓÌ8±´ÿ–“1

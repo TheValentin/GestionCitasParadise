@@ -1,0 +1,13 @@
+
+J
+java:S3740"/Provide the parametrized type for this generic.(àÂ“Åøÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™ü“
+k	java:S117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÑª§øÿÿÿÿ
+k	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ı³ÿÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(İî‰Ëûÿÿÿÿ
+n	java:S116"TRename this field "CitaLista" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È Åéÿÿÿÿÿ
+u
+java:S2638"_Fix the incompatibility of the annotation @NonNull to honor @Nullable of the overridden method.(¨ûÓŞ
+P
+java:S1161":Add the "@Override" annotation above this method signature(¨ûÓŞ
+V	java:S125"<This block of commented-out lines of code should be removed.(ÀŞşªûÿÿÿÿ

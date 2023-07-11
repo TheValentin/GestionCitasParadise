@@ -1,0 +1,14 @@
+
+E
+java:S3740"/Provide the parametrized type for this generic.(ƒ§¿ã
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â–•
+f	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†Ğ—¬
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(İî‰Ëûÿÿÿÿ
+p	java:S116"VRename this field "DoctorLista" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğÖÅ¨ıÿÿÿÿ
+u
+java:S2638""_Fix the incompatibility of the annotation @NonNull to honor @Nullable of the overridden method.(†Ğ—¬
+P
+java:S1161"":Add the "@Override" annotation above this method signature(†Ğ—¬
+V	java:S125#"<This block of commented-out lines of code should be removed.(ûÒÚµúÿÿÿÿ
+V	java:S1256"<This block of commented-out lines of code should be removed.(¶£”×ûÿÿÿÿ
+V	java:S125:"<This block of commented-out lines of code should be removed.(ëı´÷úÿÿÿÿ

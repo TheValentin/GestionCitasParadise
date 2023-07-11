@@ -40,6 +40,7 @@ public class AdapterReservarCitaPaciente extends ArrayAdapter {
         TextView fehcas=view.findViewById(R.id.txt_fechacitahistorialPaciente);
         TextView HoraIniciFin=view.findViewById(R.id.txtDiaHorarioDoctorReserva);
         TextView doctor=view.findViewById(R.id.txtDoctorEspecialidadReservar);
+        TextView Especialidad=view.findViewById(R.id.txtDoctorEspecialidadReservarLsita);
 
         //paciente
         if (CitaLista != null && position < CitaLista.size()) {
@@ -47,6 +48,7 @@ public class AdapterReservarCitaPaciente extends ArrayAdapter {
             fehcas.setText(CitaLista.get(position).getFecha());
             HoraIniciFin.setText(CitaLista.get(position).getHora_inicio() + "-" + CitaLista.get(position).getHora_fin());
             doctor.setText(" Dr "+CitaLista.get(position).getNombreDoctor()+" "+CitaLista.get(position).getApellidoDoctor());
+            Especialidad.setText("Especialidad: "+CitaLista.get(position).getNombreEspecialidad());
         }
         return view;
     }

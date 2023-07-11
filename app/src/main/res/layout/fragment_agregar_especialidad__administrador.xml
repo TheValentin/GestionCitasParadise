@@ -5,7 +5,7 @@
     android:id="@+id/FragmenIdAgregarEspecialdiad"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".actividades.uiAdministrador.Especialidad.AgregarEspecialidad_AdministradorFragment">
+    tools:context=".actividades.uiAdministrador.Especialidad.agregarEspecialidadAdministradorFragment">
 
     <!-- TODO: Update blank fragment layout -->
 

@@ -100,6 +100,15 @@
                     android:text="@string/noEspecialidad"
                     android:textColor="@color/black"
                     android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/txtDoctorEspecialidadReservarLsita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="@string/noEspecialidad"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
             </LinearLayout>
 
         </RelativeLayout>

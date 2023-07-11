@@ -1,0 +1,35 @@
+
+‘
+java:S1319-"vThe type of "especialidadsArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(¤ßúÄıÿÿÿÿ
+C
+java:S1604E"(Make this anonymous inner class a lambda(«¾³Äùÿÿÿÿ
+C
+java:S1604\"(Make this anonymous inner class a lambda(¤ñ¡ñúÿÿÿÿ
+=
+java:S1604Q"(Make this anonymous inner class a lambda(•ÁñS
+D
+java:S1604ˆ"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ
+D
+java:S1604¤"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ
+D
+java:S1604´"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ
+D
+java:S1604Â"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ
+`
+java:S1301_"KReplace this "switch" statement by "if" statements to increase readability.(ìúÇV
+}
+java:S1104-"bMake especialidadsArrayList a static final constant or non-public and provide accessors if needed.(¤ßúÄıÿÿÿÿ
+W
+java:S1444-"<Make this "public static especialidadsArrayList" field final(¤ßúÄıÿÿÿÿ
+g	java:S101)"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ò­¥ÿşÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§›ì¶ıÿÿÿÿ
+8
+java:S2386-"Make this member "protected".(¤ßúÄıÿÿÿÿ
+P	java:S125V"<This block of commented-out lines of code should be removed.(Ú—=
+6	java:S131_""Add a default case to this switch.(ìúÇV
+c	java:S100v"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—¢ï–
+h	java:S100z"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â›¡şÿÿÿÿ
+Y
+java:S1117~"CRename "fragmentManager" which hides the field declared at line 47.(–äÚ
+d	java:S100†"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ›Ÿé
+i	java:S100²"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞŞÂùÿÿÿÿ

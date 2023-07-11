@@ -19,7 +19,7 @@ public class AdapterCitasDoctor extends ArrayAdapter {
     Context context;
     private List<Cita> CitaLista;
 
-    public AdapterCitasDoctor(@NonNull Context context, List<Cita>CitaLista) {
+    public AdapterCitasDoctor(@NonNull Context context, List <Cita> CitaLista) {
         super(context, R.layout.lista_historial_cita_doctor,CitaLista);
         this.context=context;
         this.CitaLista=CitaLista;

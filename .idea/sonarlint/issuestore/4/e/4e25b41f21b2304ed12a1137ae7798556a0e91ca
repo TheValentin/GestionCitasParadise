@@ -1,0 +1,39 @@
+
+u
+java:S2293Ÿ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ
+u
+java:S1192d"ZDefine a constant instead of duplicating this literal "Este campo es obligatorio" 3 times.(€ÄĞØşÿÿÿÿ
+k	java:S117_"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê”˜Àÿÿÿÿÿ
+f	java:S117`"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÌ„¶
+C
+java:S1604K"(Make this anonymous inner class a lambda(­øéÿÿÿÿÿÿ
+>
+java:S1604T"(Make this anonymous inner class a lambda(ìää
+>
+java:S1604"(Make this anonymous inner class a lambda(’ÀÈœ
+D
+java:S1604”"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ
+b	java:S101 "MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(—ôğÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§›ì¶ıÿÿÿÿ
+v	java:S116#"aRename this field "b_cancelarEspecialidad" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ª££
+r	java:S116#"]Rename this field "b_EditEspecialidad" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ª££
+u	java:S116$"`Rename this field "TxtIDEspecialidadEdit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Ñ
+F
+java:S1659#"0Declare "b_EditEspecialidad" on a separate line.(¿ª££
+I
+java:S1659$"3Declare "TxtIDEspecialidadEdit" on a separate line.(‡Ñ
+w
+java:S1450#"aRemove the "b_EditEspecialidad" field and declare it as a local variable in the relevant methods.(¿ª££
+{
+java:S1450#"eRemove the "b_cancelarEspecialidad" field and declare it as a local variable in the relevant methods.(¿ª££
+>
+java:S1185+"(Remove this method to simply inherit it.(ßìê¯
+c	java:S100]"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àô¹‹
+1
+java:S3626|"Remove this redundant jump.(ûÁİ…
+Q
+java:S1874w"6Remove this use of "ProgressDialog"; it is deprecated.(°ã¦şÿÿÿÿ
+Q
+java:S1874w"6Remove this use of "ProgressDialog"; it is deprecated.(°ã¦şÿÿÿÿ
+H
+java:S1874x"2Remove this use of "setMessage"; it is deprecated.(Êü¹¡

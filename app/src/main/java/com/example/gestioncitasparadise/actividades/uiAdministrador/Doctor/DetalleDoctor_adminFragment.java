@@ -100,5 +100,4 @@ public class  DetalleDoctor_adminFragment extends Fragment {
 
         }
     }
-
 }

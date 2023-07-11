@@ -1,0 +1,55 @@
+
+u
+java:S2293Ø"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ
+q
+java:S1192…"ZDefine a constant instead of duplicating this literal "Este campo es obligatorio" 6 times.(Í£É
+‘
+java:S13198"vThe type of "especialidadsArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(¤ßúÄıÿÿÿÿ
+C
+java:S1604["(Make this anonymous inner class a lambda(ÏÓöœüÿÿÿÿ
+C
+java:S1604f"(Make this anonymous inner class a lambda(îß€şûÿÿÿÿ
+>
+java:S1604p"(Make this anonymous inner class a lambda(œ¿À¥
+C
+java:S1604x"(Make this anonymous inner class a lambda(Ï÷¶Êúÿÿÿÿ
+?
+java:S1604¹"(Make this anonymous inner class a lambda(’ÀÈœ
+D
+java:S1604Í"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ
+?
+java:S1604–"(Make this anonymous inner class a lambda(óÙ­
+D
+java:S1604ò"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ
+D
+java:S1604¦"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ
+}
+java:S11048"bMake especialidadsArrayList a static final constant or non-public and provide accessors if needed.(¤ßúÄıÿÿÿÿ
+W
+java:S14448"<Make this "public static especialidadsArrayList" field final(¤ßúÄıÿÿÿÿ
+g	java:S101-"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(«§Íøÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­ƒÏ¨
+h	java:S116/"SRename this field "t_nombre" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á‘ü·
+j	java:S116/"URename this field "t_apellido" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á‘ü·
+j	java:S116/"URename this field "t_telefono" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á‘ü·
+e	java:S116/"PRename this field "t_dni" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á‘ü·
+h	java:S116/"SRename this field "t_correo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á‘ü·
+p	java:S1160"VRename this field "btn_generar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ¥õ×úÿÿÿÿ
+]
+java:S1659/"GDeclare "t_apellido" and all following declarations on a separate line.(Á‘ü·
+b
+java:S16590"GDeclare "btnagregar" and all following declarations on a separate line.( ¥õ×úÿÿÿÿ
+8
+java:S23868"Make this member "protected".(¤ßúÄıÿÿÿÿ
+2
+java:S1116s"Remove this empty statement.(æŠËË
+i
+java:S3776Š"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Â¹¯Â
+2
+java:S3626¶"Remove this redundant jump.(ûÁİ…
+R
+java:S1874±"6Remove this use of "ProgressDialog"; it is deprecated.(°ã¦şÿÿÿÿ
+R
+java:S1874±"6Remove this use of "ProgressDialog"; it is deprecated.(°ã¦şÿÿÿÿ
+I
+java:S1874²"2Remove this use of "setMessage"; it is deprecated.(Êü¹¡

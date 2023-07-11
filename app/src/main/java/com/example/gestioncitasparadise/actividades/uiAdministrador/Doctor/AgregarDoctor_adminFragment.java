@@ -11,7 +11,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.text.InputType;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,8 +29,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.gestioncitasparadise.R;
-import com.example.gestioncitasparadise.actividades.uiAdministrador.Especialidad.ActualizarEspecialidad_AdministradorFragment;
-import com.example.gestioncitasparadise.actividades.uiAdministrador.Especialidad.ListaEspecialidadAdministradorFragment;
 import com.example.gestioncitasparadise.dto.Especialidad;
 import com.example.gestioncitasparadise.encriptacion;
 import com.google.android.material.textfield.TextInputLayout;

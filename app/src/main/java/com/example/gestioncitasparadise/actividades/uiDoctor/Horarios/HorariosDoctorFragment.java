@@ -9,8 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -29,10 +27,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.gestioncitasparadise.Adapter.AdapterHorarioDoctor;
 import com.example.gestioncitasparadise.R;
-import com.example.gestioncitasparadise.actividades.DoctorMenu;
-import com.example.gestioncitasparadise.actividades.uiAdministrador.Doctor.AgregarDoctor_adminFragment;
-import com.example.gestioncitasparadise.actividades.uiAdministrador.Especialidad.ListaEspecialidadAdministradorFragment;
-import com.example.gestioncitasparadise.dto.Doctor;
+import com.example.gestioncitasparadise.actividades.doctorMenu;
 import com.example.gestioncitasparadise.dto.Horarios;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -72,7 +67,7 @@ public class HorariosDoctorFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        String codigo = String.valueOf(DoctorMenu.DoctorArrayList.get(0).getId_doctor());
+        String codigo = String.valueOf(doctorMenu.DoctorArrayList.get(0).getId_doctor());
         listView = view.findViewById(R.id.list_horariosDoctor);
         adapterHorarioDoctor=new AdapterHorarioDoctor(getActivity(),HorariosArray);
         listView.setAdapter(adapterHorarioDoctor);

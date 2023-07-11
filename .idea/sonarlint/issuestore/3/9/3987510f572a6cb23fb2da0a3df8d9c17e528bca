@@ -1,0 +1,55 @@
+
+|
+java:S2293¢"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8¬ş»–“1
+|
+java:S2293Ë"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8¬ş»–“1
+|
+java:S2293ï"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8¬ş»–“1
+R
+java:S1066Œ"/Merge this if statement with the enclosing one.(¢¹¹ïûÿÿÿÿ8­ş»–“1
+
+java:S13192"sThe type of "citaDoctorArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(ØÜ68­ş»–“1
+r	java:S117d"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡çÿÿÿÿÿ8­ş»–“1
+n	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷„Ä8­ş»–“1
+n	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼°Òı8­ş»–“1
+s	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­¹Ò„şÿÿÿÿ8­ş»–“1
+s	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥±†«üÿÿÿÿ8­ş»–“1
+n	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹Ë›€8­ş»–“1
+J
+java:S1604e"(Make this anonymous inner class a lambda(¤ñ¡ñúÿÿÿÿ8­ş»–“1
+D
+java:S1604X"(Make this anonymous inner class a lambda(‹‰^8­ş»–“1
+J
+java:S1604x"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ8­ş»–“1
+K
+java:S1604˜"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8­ş»–“1
+K
+java:S1604­"(Make this anonymous inner class a lambda(ô™®©ıÿÿÿÿ8­ş»–“1
+K
+java:S1604À"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8­ş»–“1
+K
+java:S1604à"(Make this anonymous inner class a lambda(Œ×âÑûÿÿÿÿ8­ş»–“1
+K
+java:S1604å"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8­ş»–“1
+K
+java:S1604ş"(Make this anonymous inner class a lambda(æÖ„ãüÿÿÿÿ8­ş»–“1
+g
+java:S1301h"KReplace this "switch" statement by "if" statements to increase readability.(ìúÇV8­ş»–“1
+{
+java:S11042"_Make citaDoctorArrayList a static final constant or non-public and provide accessors if needed.(ØÜ68®ş»–“1
+U
+java:S14442"9Make this "public static citaDoctorArrayList" field final(ØÜ68®ş»–“1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(á…¬”úÿÿÿÿ8¯ş»–“1
+v	java:S1167"ZRename this field "url_cancelarita" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ­Òğ8åş»–“1
+9
+java:S23862"Make this member "protected".(ØÜ68êş»–“1
+E
+java:S1185<"(Remove this method to simply inherit it.(ßìê¯8òş»–“1
+`
+java:S1155L">Use isEmpty() to check whether the collection is empty or not.(Ùì®ıÿÿÿÿ8Ñ«’š“1
+X	java:S125W"<This block of commented-out lines of code should be removed.(ªÇ‚é8ôş»–“1
+W	java:S125\"<This block of commented-out lines of code should be removed.(Ú—=8õş»–“1
+=	java:S131h""Add a default case to this switch.(ìúÇV8öş»–“1
+k	java:S100Õ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„“©µ8ış»–“1
+
+java:S1186â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÆÓÌ8şş»–“1

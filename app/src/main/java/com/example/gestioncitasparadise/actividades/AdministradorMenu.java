@@ -18,11 +18,10 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.gestioncitasparadise.R;
-import com.example.gestioncitasparadise.actividades.uiAdministrador.Especialidad.ListaEspecialidadAdministradorFragment;
+import com.example.gestioncitasparadise.actividades.uiAdministrador.Especialidad.listaEspecialidadAdministradorFragment;
 import com.example.gestioncitasparadise.actividades.uiAdministrador.Historial_AdministradorFragment;
 import com.example.gestioncitasparadise.actividades.uiAdministrador.PerfilAdminFragment;
 import com.example.gestioncitasparadise.actividades.uiAdministrador.Doctor.ListarDoctor_AdministradorFragment;
-import com.example.gestioncitasparadise.actividades.uiPaciente.HistorialFragment;
 import com.example.gestioncitasparadise.login.IniciarSessionActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -72,7 +71,7 @@ public class AdministradorMenu extends AppCompatActivity implements NavigationVi
                     return true;
                 }else if (itemID==R.id.page_Registrar_especialidad){
                     toolbar.setTitle(R.string.nav_Especialidad);
-                    openFragment(new ListaEspecialidadAdministradorFragment());
+                    openFragment(new listaEspecialidadAdministradorFragment());
                     return true;
                 }
 

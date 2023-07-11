@@ -1,6 +1,9 @@
 package com.example.gestioncitasparadise;
 
+
 import androidx.appcompat.app.AppCompatActivity;
+
+
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
@@ -10,12 +13,13 @@ import java.security.cert.X509Certificate;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
 
 import com.example.gestioncitasparadise.actividades.AdministradorMenu;
-import com.example.gestioncitasparadise.actividades.DoctorMenu;
+import com.example.gestioncitasparadise.actividades.doctorMenu;
 import com.example.gestioncitasparadise.actividades.pacienteMenu;
 import com.example.gestioncitasparadise.login.IniciarSessionActivity;
 import com.example.gestioncitasparadise.login.RegistrarActivity;
@@ -72,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
         } else if (isLoggedDoctor) {
             // El doctor está iniciado sesión, continuar con la actividad principal del doctor
-            Intent intent = new Intent(this, DoctorMenu.class);
+            Intent intent = new Intent(this, doctorMenu.class);
             startActivity(intent);
 
         } else {
@@ -81,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
     }
+    // Declare the launcher at the top of your Activity/Fragment:
+
 
 
 }

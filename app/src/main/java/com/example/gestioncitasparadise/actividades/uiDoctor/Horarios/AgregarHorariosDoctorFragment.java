@@ -7,7 +7,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.text.InputType;
 import android.view.LayoutInflater;
@@ -28,22 +27,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.gestioncitasparadise.R;
-import com.example.gestioncitasparadise.actividades.DoctorMenu;
-import com.example.gestioncitasparadise.dto.Especialidad;
-import com.example.gestioncitasparadise.dto.Horarios;
-import com.google.android.material.textfield.TextInputEditText;
+import com.example.gestioncitasparadise.actividades.doctorMenu;
 import com.google.android.material.textfield.TextInputLayout;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Objects;
 
 public class AgregarHorariosDoctorFragment extends Fragment {
 
@@ -202,7 +192,7 @@ public class AgregarHorariosDoctorFragment extends Fragment {
 
     private void insertarDatos() {
 
-        String id_doctor= String.valueOf(DoctorMenu.DoctorArrayList.get(0).getId_doctor());
+        String id_doctor= String.valueOf(doctorMenu.DoctorArrayList.get(0).getId_doctor());
         String Dia_semana= autoCompleteTextView.getText().toString();
         String hora_inicio= t_hora_inicio.getEditText().getText().toString();
         String hora_fin= t_hora_fin.getEditText().getText().toString();

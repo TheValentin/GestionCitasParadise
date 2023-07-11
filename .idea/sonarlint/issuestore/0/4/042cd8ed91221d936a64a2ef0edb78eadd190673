@@ -1,0 +1,50 @@
+
+u
+java:S2293´"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ
+u
+java:S2293û"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ
+K
+java:S1066Ô"/Merge this if statement with the enclosing one.(¢¹¹ïûÿÿÿÿ
+ˆ
+java:S13196"mThe type of "citaArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(œáœÉøÿÿÿÿ
+g	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷„Ä
+g	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼°Òı
+l	java:S117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­¹Ò„şÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æõÄÅûÿÿÿÿ
+g	java:S117Ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹Ë›€
+C
+java:S1604n"(Make this anonymous inner class a lambda(¤ñ¡ñúÿÿÿÿ
+>
+java:S1604c"(Make this anonymous inner class a lambda(ä¿ÖŞ
+D
+java:S1604†"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ
+D
+java:S1604ª"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ
+D
+java:S1604Æ"(Make this anonymous inner class a lambda(æÖ„ãüÿÿÿÿ
+D
+java:S1604Ş"(Make this anonymous inner class a lambda(ô™®©ıÿÿÿÿ
+D
+java:S1604ğ"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ
+`
+java:S1301q"KReplace this "switch" statement by "if" statements to increase readability.(ìúÇV
+{
+java:S11046"YMake citaArrayList a static final constant or non-public and provide accessors if needed.(œáœÉøÿÿÿÿ8ô†Ë™“1
+U
+java:S14446"3Make this "public static citaArrayList" field final(œáœÉøÿÿÿÿ8ô†Ë™“1
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(İ—
+{	java:S116:"aRename this field "ListarCitasProgramadas" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã£ÅĞøÿÿÿÿ
+p	java:S116<"VRename this field "UrlEliminar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Äªººüÿÿÿÿ
+o	java:S116="ZRename this field "url_cancelarita" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ­Òğ
+r	java:S116>"XRename this field "UrlListarCita" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥êŸ¾ÿÿÿÿÿ
+8
+java:S23866"Make this member "protected".(œáœÉøÿÿÿÿ
+E
+java:S1185C"(Remove this method to simply inherit it.(ßìê¯8©ã“1
+Z
+java:S1155V">Use isEmpty() to check whether the collection is empty or not.(Ç³”j8¢ õ“1
+d
+java:S1858W"H"getId_paciente" returns a string, there's no need to call "toString()".(óöÜn8¢ õ“1
+W	java:S125g"<This block of commented-out lines of code should be removed.(Ú—=8™Øê“1
+=	java:S131q""Add a default case to this switch.(ìúÇV8›Øê“1
+p	java:S100‡"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì£á¹üÿÿÿÿ8§Øê“1

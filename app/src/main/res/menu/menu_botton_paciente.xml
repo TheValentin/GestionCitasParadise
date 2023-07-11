@@ -4,7 +4,7 @@
     <item
         android:id="@+id/page_historial_paciente"
         android:icon="@drawable/ic_launcher_foreground"
-        android:title="Historial"/>
+        android:title="Citas"/>
     <item
         android:id="@+id/page_reserva_paciente"
         android:icon="@drawable/ic_launcher_foreground"
@@ -12,7 +12,7 @@
     <item
         android:id="@+id/paga_datos_paciente"
         android:icon="@drawable/ic_launcher_foreground"
-        android:title="Datos"/>
+        android:title="Historial"/>
 
 
 

@@ -5,12 +5,15 @@
         android:id="@+id/page_Lista_Doctor"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="Citas lista"/>
-    <item
-        android:id="@+id/paga_DatosDoctor"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Datos"/>
-    <item
-        android:id="@+id/page_Diagnostico_doctor"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Diagnostico"/>
+    <!--
+     <item
+         android:id="@+id/paga_DatosDoctor"
+         android:icon="@drawable/ic_launcher_foreground"
+         android:title="Datos"/>
+
+     <item
+         android:id="@+id/page_Diagnostico_doctor"
+         android:icon="@drawable/ic_launcher_foreground"
+         android:title="Diagnostico"/>
+         -->
 </menu>

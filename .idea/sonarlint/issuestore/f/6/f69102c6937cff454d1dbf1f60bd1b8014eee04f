@@ -1,0 +1,20 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³ªŒÓÿÿÿÿÿ
+]
+java:S1659"BDeclare "email" and all following declarations on a separate line.(§Ñ¼Ìüÿÿÿÿ
+e
+java:S1858/"J"getNombre_doctor" returns a string, there's no need to call "toString()".(ô£äÌÿÿÿÿÿ
+d
+java:S18580"I"getEmail_doctor" returns a string, there's no need to call "toString()".(²ðž»þÿÿÿÿ
+e
+java:S18581"J"getNombre_doctor" returns a string, there's no need to call "toString()".(ŠŒÀ¼ùÿÿÿÿ
+b
+java:S18582"L"getApellido_doctor" returns a string, there's no need to call "toString()".(†—ôá
+b
+java:S18583"G"getDni_doctor" returns a string, there's no need to call "toString()".(´×”³ûÿÿÿÿ
+g
+java:S18584"L"getTelefono_doctor" returns a string, there's no need to call "toString()".(˜§æèùÿÿÿÿ
+h
+java:S18585"M"getDireccion_doctor" returns a string, there's no need to call "toString()".(”­ƒìÿÿÿÿÿ
+d
+java:S18586"O"getNombreEspecialidad" returns a string, there's no need to call "toString()".(éÊÊA

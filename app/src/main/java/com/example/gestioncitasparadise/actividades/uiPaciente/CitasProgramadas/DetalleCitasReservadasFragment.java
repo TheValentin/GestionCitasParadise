@@ -154,7 +154,8 @@ public class DetalleCitasReservadasFragment extends Fragment {
 
                 fechaCita=calendario.getEditText().getText().toString();
                 if(  hora!=null && fechaCita!=null && !hora.isEmpty() && !fechaCita.isEmpty()){
-                    ReprogramarCita(id_cita,hora,fechaCita);
+                    String mensaje="el paciente actualizo su cita";
+                    ReprogramarCita(id_cita,hora,fechaCita,mensaje);
                 }else {
                     Toast.makeText(getContext(),"No se Reprogramno Correctamente",Toast.LENGTH_SHORT).show();
                 }
@@ -228,6 +229,8 @@ public class DetalleCitasReservadasFragment extends Fragment {
 
             }
         }, year, month, dayOfMonth);
+        datePickerDialog.getDatePicker().setMinDate(calendar.getTimeInMillis());
+
 
         // Muestra el cuadro de calendario
         datePickerDialog.show();
@@ -255,9 +258,7 @@ public class DetalleCitasReservadasFragment extends Fragment {
                                     String Hora_final=object.getString("hora_fin");
                                     horarios =new Horarios(id_horario,id_doctor,dia_semana,Hora_inicio,Hora_final);
                                     HorariosArrayList.add(horarios);
-                                    if (HorariosArrayList.size() > 0) {
-                                        //adapterHorarioDoctor.notifyDataSetChanged();
-                                    }
+
 
                                 }
                                 adapterHorarioDoctor.notifyDataSetChanged();
@@ -293,7 +294,7 @@ public class DetalleCitasReservadasFragment extends Fragment {
     }
 
 
-    private void ReprogramarCita(String id_cita, String hora, String fecha) {
+    private void ReprogramarCita(String id_cita, String hora, String fecha, String mensaje) {
 
 
         final ProgressDialog progressDialog = new ProgressDialog(getActivity());
@@ -309,14 +310,11 @@ public class DetalleCitasReservadasFragment extends Fragment {
 
                     if (valor.equalsIgnoreCase("datos actualizados")) {
                         Toast.makeText(getActivity(), "Cita Reprogramada", Toast.LENGTH_SHORT).show();
+                        HistorialFragment.enviarNotificacion(getActivity(),id_cita,"Cita Reprogramada",mensaje);
                         progressDialog.dismiss();
-
                         openFragment(new HistorialFragment());
-
-
-
                     } else {
-                        Toast.makeText(getActivity(), valor+"aaaa", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), valor, Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
 
                     }

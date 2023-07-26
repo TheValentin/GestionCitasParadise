@@ -52,7 +52,7 @@ public class DetalleCitasReservadasDoctorFragment extends Fragment {
 
     TextView txtFechaCita, txtDiaCita, txtHorarioCita,txtPacienteCita,txtTelefonoCita,txtEstadoCita,Dia_reservado;
     TextInputLayout calendario;
-    String fechaCita, id_Doctor, hora, id_cita,mensaje;
+    String fechaCita, id_Doctor, hora, id_cita,mensaje, escoger;
     public static ArrayList<Horarios> HorariosArrayList=new ArrayList<>();
     Horarios horarios;
 
@@ -136,6 +136,7 @@ public class DetalleCitasReservadasDoctorFragment extends Fragment {
 
                 b_guardar.setVisibility(View.VISIBLE);
                 hora=HorariosArrayList.get(position).getId_Horarios();
+                escoger=HorariosArrayList.get(position).getHora_inicio();
 
             }
         });
@@ -151,9 +152,13 @@ public class DetalleCitasReservadasDoctorFragment extends Fragment {
 
                 fechaCita=calendario.getEditText().getText().toString();
                 if(  hora!=null && fechaCita!=null && !hora.isEmpty() && !fechaCita.isEmpty()){
-
-                    mensaje="";
-
+                    Bundle args = getArguments();
+                    if (args != null) {
+                        int position = args.getInt("position");
+                        mensaje="Hola "+ListaDoctorFragment.citaDoctorArrayList.get(position).getNombrePaciente()+" "+ListaDoctorFragment.citaDoctorArrayList.get(position).getApellidoPaciente()+
+                                " se le reprogramamo su cita del "+(ListaDoctorFragment.citaDoctorArrayList.get(position).getDia_semana())+" de "+ListaDoctorFragment.citaDoctorArrayList.get(position).getFecha() +" para el dia "
+                                +fechaCita+" hora "+escoger;
+                    }
                     ReprogramarCita(id_cita,hora,fechaCita,mensaje);
                 }else {
                     Toast.makeText(getContext(),"No se Reprogramno Correctamente",Toast.LENGTH_SHORT).show();
@@ -229,6 +234,8 @@ public class DetalleCitasReservadasDoctorFragment extends Fragment {
 
             }
         }, year, month, dayOfMonth);
+        datePickerDialog.getDatePicker().setMinDate(calendar.getTimeInMillis());
+
 
         // Muestra el cuadro de calendario
         datePickerDialog.show();
@@ -347,7 +354,7 @@ public class DetalleCitasReservadasDoctorFragment extends Fragment {
 
     }
 
-    public  void enviarNotificacion(String id_cita, String TITULO, String MENSAJE ){
+    public  void enviarNotificacion(String id_cita, String titulo, String mensaje ){
         StringRequest request=new StringRequest(Request.Method.POST, urlNotificacion, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -365,9 +372,8 @@ public class DetalleCitasReservadasDoctorFragment extends Fragment {
 
                 Map<String,String>  params=new HashMap<String,String>();
                 params.put("id_cita",id_cita);
-                params.put("TITULO",TITULO);
-                params.put("MENSAJE",MENSAJE);
-
+                params.put("TITULO",titulo);
+                params.put("MENSAJE",mensaje);
                 return params;
             }
         };

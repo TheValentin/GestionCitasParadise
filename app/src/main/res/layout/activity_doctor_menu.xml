@@ -46,6 +46,7 @@
                 <com.google.android.material.bottomnavigation.BottomNavigationView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:id="@+id/bottom_navigation_doctor"
                     app:labelVisibilityMode="labeled"
                     app:menu="@menu/menu_botton_doctor"

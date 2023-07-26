@@ -20,7 +20,6 @@ public class PerfilDoctorFragment extends Fragment {
 
     TextView nombredoctor,email,nombre,apellido, dni, telefono, direccion,especialidad;
 
-    int codigo= doctorMenu.DoctorArrayList.get(0).getId_doctor();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

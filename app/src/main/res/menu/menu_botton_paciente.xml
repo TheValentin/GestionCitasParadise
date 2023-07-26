@@ -9,11 +9,13 @@
         android:id="@+id/page_reserva_paciente"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="Reserva"/>
+
+    <!--
     <item
         android:id="@+id/paga_datos_paciente"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="Historial"/>
-
+    -->
 
 
 </menu>

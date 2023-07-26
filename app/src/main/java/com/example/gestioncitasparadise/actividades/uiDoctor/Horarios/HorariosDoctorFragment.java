@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -49,6 +50,7 @@ public class HorariosDoctorFragment extends Fragment {
     AdapterHorarioDoctor adapterHorarioDoctor;
     FragmentManager fragmentManager;
     ListView listView;
+    TextView fechalimite;
     String codiog;
 
 
@@ -68,6 +70,12 @@ public class HorariosDoctorFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         String codigo = String.valueOf(doctorMenu.DoctorArrayList.get(0).getId_doctor());
+
+
+        fechalimite=view.findViewById(R.id.txtFechalimite);
+
+
+
         listView = view.findViewById(R.id.list_horariosDoctor);
         adapterHorarioDoctor=new AdapterHorarioDoctor(getActivity(),HorariosArray);
         listView.setAdapter(adapterHorarioDoctor);

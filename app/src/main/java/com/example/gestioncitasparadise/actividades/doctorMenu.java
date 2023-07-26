@@ -61,7 +61,7 @@ public class doctorMenu extends AppCompatActivity implements NavigationView.OnNa
     Toolbar toolbar;
     public static ArrayList<Doctor> DoctorArrayList =new ArrayList<>();
     public static List<Horarios> HorariosArray= new ArrayList<>();
-    Horarios horarios;
+    String urlActualizarToken="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/ActualizarTokenDoctor.php";
     Doctor doctor;
     String usuario;
     String contraseña;
@@ -99,7 +99,7 @@ public class doctorMenu extends AppCompatActivity implements NavigationView.OnNa
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int itemID=item.getItemId();
 
-                if (itemID==R.id.paga_DatosDoctor){
+                if (itemID==-1){//if (itemID==R.id.paga_DatosDoctor){
                     //toolbar.setTitle(R.string.nav_Historial);
                     openFragment(new DatosDoctorFragment());
                     return true;
@@ -107,7 +107,7 @@ public class doctorMenu extends AppCompatActivity implements NavigationView.OnNa
                     //toolbar.setTitle(R.string.nav_Doctor);
                     openFragment(new ListaDoctorFragment());
                     return true;
-                }else if (itemID==R.id.page_Diagnostico_doctor){
+                }else if (itemID==-1){//if (itemID==R.id.page_Diagnostico_doctor){
                     //toolbar.setTitle(R.string.nav_Especialidad);
                     openFragment(new DiagnosticoDoctorFragment());
                     return true;
@@ -139,7 +139,7 @@ public class doctorMenu extends AppCompatActivity implements NavigationView.OnNa
 
         }else if (itemID==R.id.nav_drawer_casa_doctor){
             toolbar.setTitle(R.string.nav_help);
-            Toast.makeText(this,"Home",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Ayuda",Toast.LENGTH_SHORT).show();
         }else if (itemID==R.id.nav_drawer_salir_doctor){
             cerrarSesion();
         }
@@ -159,6 +159,9 @@ public class doctorMenu extends AppCompatActivity implements NavigationView.OnNa
 
     public void cerrarSesion() {
 
+
+        DoctorArrayList.get(0).getId_doctor();
+        eliminarTokenUsuario(DoctorArrayList.get(0).getId_doctor());
         SharedPreferences sharedPreferences = getSharedPreferences("mis_preferencias", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.remove("usuario");
@@ -166,6 +169,7 @@ public class doctorMenu extends AppCompatActivity implements NavigationView.OnNa
         editor.clear(); // Eliminar todas las preferencias
         editor.apply(); // Aplicar los cambios
 
+        DoctorArrayList.clear();
         // Redirigir a la pantalla de inicio de sesión
         Intent intent = new Intent(this, IniciarSessionActivity.class);
         startActivity(intent);
@@ -238,6 +242,40 @@ public class doctorMenu extends AppCompatActivity implements NavigationView.OnNa
         RequestQueue requestQueue = Volley.newRequestQueue(doctorMenu.this);
         requestQueue.add(request);
 
+    }
+
+
+    public void eliminarTokenUsuario(int id){
+        String Estado="Sin token";
+        StringRequest request=new StringRequest(Request.Method.POST, urlActualizarToken, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                String valor=response.trim();
+                if (valor.equalsIgnoreCase("datos actualizados")) {
+                    Toast.makeText(doctorMenu.this, "Cerraste sesion", Toast.LENGTH_SHORT).show();
+
+                } else {
+                    Toast.makeText(doctorMenu.this, valor, Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(doctorMenu.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String,String>  params=new HashMap<String,String>();
+                params.put("id_doctor",""+id);
+                params.put("Token",Estado);
+                return params;
+            }
+        };
+        RequestQueue requestQueue= Volley.newRequestQueue( doctorMenu.this);
+        requestQueue.add(request);
     }
 
     public static void postRegistrarDispositivoEnServidor(String token, Context context, String id){

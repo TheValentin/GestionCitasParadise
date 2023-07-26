@@ -2,11 +2,11 @@
 |
 java:S2293¢"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8¬þ»–“1
 |
-java:S2293Ë"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8¬þ»–“1
+java:S2293Ì"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8¬þ»–“1
 |
-java:S2293ï"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8¬þ»–“1
+java:S2293ð"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8¬þ»–“1
 R
-java:S1066Œ"/Merge this if statement with the enclosing one.(¢¹¹ïûÿÿÿÿ8­þ»–“1
+java:S1066"/Merge this if statement with the enclosing one.(¢¹¹ïûÿÿÿÿ8­þ»–“1
 
 java:S13192"sThe type of "citaDoctorArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(ØÜ68­þ»–“1
 r	java:S117d"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡çžÿÿÿÿÿ8­þ»–“1
@@ -26,13 +26,13 @@ java:S1604˜"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8­þ»–“1
 K
 java:S1604­"(Make this anonymous inner class a lambda(ô™®©ýÿÿÿÿ8­þ»–“1
 K
-java:S1604À"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8­þ»–“1
+java:S1604Á"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8­þ»–“1
 K
-java:S1604à"(Make this anonymous inner class a lambda(Œ×âÑûÿÿÿÿ8­þ»–“1
+java:S1604á"(Make this anonymous inner class a lambda(Œ×âÑûÿÿÿÿ8­þ»–“1
 K
-java:S1604å"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8­þ»–“1
+java:S1604æ"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8­þ»–“1
 K
-java:S1604þ"(Make this anonymous inner class a lambda(æÖ„ãüÿÿÿÿ8­þ»–“1
+java:S1604ÿ"(Make this anonymous inner class a lambda(æÖ„ãüÿÿÿÿ8­þ»–“1
 g
 java:S1301h"KReplace this "switch" statement by "if" statements to increase readability.(ìúÇV8­þ»–“1
 {
@@ -50,6 +50,6 @@ java:S1155L">Use isEmpty() to check whether the collection is empty or not.(Ùì®
 X	java:S125W"<This block of commented-out lines of code should be removed.(ªÇ‚é8ôþ»–“1
 W	java:S125\"<This block of commented-out lines of code should be removed.(Ú—=8õþ»–“1
 =	java:S131h""Add a default case to this switch.(ìúÇV8öþ»–“1
-k	java:S100Õ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„“©µ8ýþ»–“1
+k	java:S100Ö"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„“©µ8ýþ»–“1
 ž
-java:S1186â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÆÓÌ8þþ»–“1
+java:S1186ã"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÆÓÌ8þþ»–“1

@@ -1,0 +1,40 @@
+
+u
+java:S2293Â"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ
+p
+java:S1192f"ZDefine a constant instead of duplicating this literal "Este campo es obligatorio" 7 times.(€ôÆæ
+C
+java:S1604H"(Make this anonymous inner class a lambda(ö¾û€ıÿÿÿÿ
+C
+java:S1604O"(Make this anonymous inner class a lambda(ÿ…¼åÿÿÿÿÿ
+?
+java:S1604¦"(Make this anonymous inner class a lambda(Ÿ¿¨ñ
+D
+java:S1604·"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ
+D
+java:S1604Ú"(Make this anonymous inner class a lambda(áö¤Âùÿÿÿÿ
+m	java:S116)"SRename this field "t_nombre" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÃ³óøÿÿÿÿ
+o	java:S116)"URename this field "t_apellido" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÃ³óøÿÿÿÿ
+o	java:S116)"URename this field "t_telefono" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÃ³óøÿÿÿÿ
+j	java:S116)"PRename this field "t_dni" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÃ³óøÿÿÿÿ
+m	java:S116)"SRename this field "t_correo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÃ³óøÿÿÿÿ
+q	java:S116)"WRename this field "t_contrasena" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÃ³óøÿÿÿÿ
+p	java:S116)"VRename this field "t_dirrecion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÃ³óøÿÿÿÿ
+l	java:S116)"RRename this field "t_fecha" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÃ³óøÿÿÿÿ
+p	java:S116*"VRename this field "b_Registrar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûíñ®şÿÿÿÿ
+b
+java:S1659)"GDeclare "t_apellido" and all following declarations on a separate line.(óÃ³óøÿÿÿÿ
+F
+java:S1659*"+Declare "btnCalendario" on a separate line.(ûíñ®şÿÿÿÿ
+C
+java:S11723"(Remove this unused method parameter "v".(ºî¹âûÿÿÿÿ
+g
+java:S3776X"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(£ïÆ0
+2
+java:S3626£"Remove this redundant jump.(ûÁİ…
+R
+java:S1874"6Remove this use of "ProgressDialog"; it is deprecated.(°ÕÈøÿÿÿÿ
+R
+java:S1874"6Remove this use of "ProgressDialog"; it is deprecated.(°ÕÈøÿÿÿÿ
+I
+java:S1874Ÿ"2Remove this use of "setMessage"; it is deprecated.(Êü¹¡

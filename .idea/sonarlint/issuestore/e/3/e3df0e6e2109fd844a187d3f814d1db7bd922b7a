@@ -1,0 +1,129 @@
+
+|
+java:S2293¸"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8‡®Ÿñ”1
+|
+java:S2293õ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8ˆ®Ÿñ”1
+|
+java:S2293ê"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8ˆ®Ÿñ”1
+|
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8ˆ®Ÿñ”1
+i
+java:S1192è"FDefine a constant instead of duplicating this literal "datos" 3 times.(üß±İÿÿÿÿÿ8ˆ®Ÿñ”1
+i
+java:S1192ç"FDefine a constant instead of duplicating this literal "exito" 3 times.( Ê‰ìúÿÿÿÿ8ˆ®Ÿñ”1
+˜
+java:S1319B"vThe type of "especialidadsArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(¤ßúÄıÿÿÿÿ8‰®Ÿñ”1
+Œ
+java:S1319C"oThe type of "DoctorArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(ş¦îÌ8‰®Ÿñ”1
+“
+java:S1319D"qThe type of "HorariosArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(Ù„¹äøÿÿÿÿ8‰®Ÿñ”1
+n	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ÊÊœ8Š®Ÿñ”1
+s	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸‰Íşøÿÿÿÿ8Š®Ÿñ”1
+s	java:S117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–õ«Âùÿÿÿÿ8Š®Ÿñ”1
+s	java:S117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–õ«Âùÿÿÿÿ8Š®Ÿñ”1
+s	java:S117Ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¨ë ûÿÿÿÿ8Š®Ÿñ”1
+s	java:S117Ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æõÄÅûÿÿÿÿ8Š®Ÿñ”1
+n	java:S117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷„Ä8Š®Ÿñ”1
+n	java:S117Ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â™€Ë8Š®Ÿñ”1
+n	java:S117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò¬«‡8Š®Ÿñ”1
+s	java:S117Ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±åíòøÿÿÿÿ8Š®Ÿñ”1
+s	java:S117Ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±åíòøÿÿÿÿ8Š®Ÿñ”1
+E
+java:S1604©"(Make this anonymous inner class a lambda(’á¯8‹®Ÿñ”1
+K
+java:S1604¸"(Make this anonymous inner class a lambda(§´­üÿÿÿÿ8‹®Ÿñ”1
+K
+java:S1604•"(Make this anonymous inner class a lambda(®”‘Œüÿÿÿÿ8‹®Ÿñ”1
+J
+java:S1604w"(Make this anonymous inner class a lambda(ÕÕÂÜøÿÿÿÿ8‹®Ÿñ”1
+K
+java:S1604Ì"(Make this anonymous inner class a lambda(œûŒùÿÿÿÿ8‹®Ÿñ”1
+K
+java:S1604ß"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ8‹®Ÿñ”1
+K
+java:S1604ÿ"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8‹®Ÿñ”1
+K
+java:S1604"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ8‹®Ÿñ”1
+K
+java:S1604®"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8‹®Ÿñ”1
+K
+java:S1604Ë"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ8‹®Ÿñ”1
+K
+java:S1604ë"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8‹®Ÿñ”1
+K
+java:S1604"(Make this anonymous inner class a lambda(÷Ïëçúÿÿÿÿ8‹®Ÿñ”1
+E
+java:S1604Ğ"(Make this anonymous inner class a lambda(ôË·p8‹®Ÿñ”1
+K
+java:S1604à"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8‹®Ÿñ”1
+K
+java:S1604ş"(Make this anonymous inner class a lambda(Œ×âÑûÿÿÿÿ8‹®Ÿñ”1
+K
+java:S1604„"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8‹®Ÿñ”1
+„
+java:S1104B"bMake especialidadsArrayList a static final constant or non-public and provide accessors if needed.(¤ßúÄıÿÿÿÿ8Œ®Ÿñ”1
+x
+java:S1104C"[Make DoctorArrayList a static final constant or non-public and provide accessors if needed.(ş¦îÌ8Œ®Ÿñ”1
+
+java:S1104D"]Make HorariosArrayList a static final constant or non-public and provide accessors if needed.(Ù„¹äøÿÿÿÿ8Œ®Ÿñ”1
+^
+java:S1444B"<Make this "public static especialidadsArrayList" field final(¤ßúÄıÿÿÿÿ8Œ®Ÿñ”1
+R
+java:S1444C"5Make this "public static DoctorArrayList" field final(ş¦îÌ8Œ®Ÿñ”1
+Y
+java:S1444D"7Make this "public static HorariosArrayList" field final(Ù„¹äøÿÿÿÿ8Œ®Ÿñ”1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿â·‘8®Ÿñ”1
+v	java:S116="URename this field "txt_doctor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡“Âõùÿÿÿÿ8Ù®Ÿñ”1
+u	java:S116="TRename this field "txt_fecha" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡“Âõùÿÿÿÿ8Ù®Ÿñ”1
+y	java:S116="XRename this field "Dia_reservado" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡“Âõùÿÿÿÿ8Ù®Ÿñ”1
+p	java:S116>"TRename this field "b_guardar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–—ÉŸ8Ú®Ÿñ”1
+s	java:S116>"WRename this field "b_calendario" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–—ÉŸ8Ú®Ÿñ”1
+p	java:S116J"TRename this field "id_Doctor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á–œÏ8Ú®Ÿñ”1
+r	java:S116J"VRename this field "id_paciente" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á–œÏ8Ú®Ÿñ”1
+n	java:S116Q"RRename this field "UrlCita" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô’æï8Ú®Ÿñ”1
+w
+java:S3008C"ZRename this field "DoctorArrayList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş¦îÌ8Ú®Ÿñ”1
+~
+java:S3008D"\Rename this field "HorariosArrayList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù„¹äøÿÿÿÿ8Ú®Ÿñ”1
+m
+java:S1659;"KDeclare "listViewDoctor" and all following declarations on a separate line.(ì¨˜úÿÿÿÿ8ß®Ÿñ”1
+h
+java:S1659="FDeclare "txt_fecha" and all following declarations on a separate line.(¡“Âõùÿÿÿÿ8ß®Ÿñ”1
+G
+java:S1659>"*Declare "b_calendario" on a separate line.(–—ÉŸ8ß®Ÿñ”1
+e
+java:S1659J"HDeclare "id_paciente" and all following declarations on a separate line.(Á–œÏ8ß®Ÿñ”1
+?
+java:S2386B"Make this member "protected".(¤ßúÄıÿÿÿÿ8á®Ÿñ”1
+:
+java:S2386C"Make this member "protected".(ş¦îÌ8á®Ÿñ”1
+?
+java:S2386D"Make this member "protected".(Ù„¹äøÿÿÿÿ8á®Ÿñ”1
+D
+java:S1185S"(Remove this method to simply inherit it.(¥Ë©8è®Ÿñ”1
+w
+java:S3981"TThe size of "DoctorArrayList" is always ">=0", so update this test to use isEmpty().(ò¬ş¨ûÿÿÿÿ8ë®Ÿñ”1
+a
+java:S1155”">Use isEmpty() to check whether the collection is empty or not.(äˆ¡ıÿÿÿÿ8ë®Ÿñ”1
+f
+java:S1858Ï"H"getId_paciente" returns a string, there's no need to call "toString()".(¯ë¥ä8¨æÜñ”1
+k	java:S100İ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹…ğ8ñ®Ÿñ”1
+a
+java:S1155ô">Use isEmpty() to check whether the collection is empty or not.(äˆ¡ıÿÿÿÿ8ô®Ÿñ”1
+p	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸‰Íşøÿÿÿÿ8õ®Ÿñ”1
+[
+java:S1155£">Use isEmpty() to check whether the collection is empty or not.(âøÇV8ö®Ÿñ”1
+^	java:S125¤"<This block of commented-out lines of code should be removed.(ßÈ´éıÿÿÿÿ8÷®Ÿñ”1
+p	java:S100É"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–õ«Âùÿÿÿÿ8ø®Ÿñ”1
+a
+java:S1155à">Use isEmpty() to check whether the collection is empty or not.(‚Ô¤›şÿÿÿÿ8ú®Ÿñ”1
+Y	java:S125á"<This block of commented-out lines of code should be removed.(‘º½8ú®Ÿñ”1
+p	java:S100Ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±åíòøÿÿÿÿ8‚¯Ÿñ”1
+Y
+java:S1874Ì"6Remove this use of "ProgressDialog"; it is deprecated.(°ã¦şÿÿÿÿ8‚¯Ÿñ”1
+Y
+java:S1874Ì"6Remove this use of "ProgressDialog"; it is deprecated.(°ã¦şÿÿÿÿ8ƒ¯Ÿñ”1
+P
+java:S1874Í"2Remove this use of "setMessage"; it is deprecated.(Êü¹¡8ƒ¯Ÿñ”1
+
+java:S1186€"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÆÓÌ8¿æÜñ”1

@@ -51,6 +51,7 @@ public class pacienteMenu extends AppCompatActivity implements NavigationView.On
     BottomNavigationView bottomNavigationView;
     FragmentManager fragmentManager;
     Toolbar toolbar;
+    String urlActualizarToken="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/ActualizarTokenPaciente.php";
 
     public static ArrayList<Paciente> PacienteArrayList =new ArrayList<>();
     Paciente paciente;
@@ -86,7 +87,7 @@ public class pacienteMenu extends AppCompatActivity implements NavigationView.On
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int itemID=item.getItemId();
 
-                if (itemID==R.id.paga_datos_paciente){
+                if (itemID==-1){//itemID==R.id.paga_datos_paciente){
                     //toolbar.setTitle(R.string.nav_Historial);
                     openFragment(new DatosFragment());
                     return true;
@@ -138,13 +139,17 @@ public class pacienteMenu extends AppCompatActivity implements NavigationView.On
 
 
     private void cerrarSesion() {
-
+        PacienteArrayList.get(0).getId_paciente();
+        eliminarTokenUsuario( PacienteArrayList.get(0).getId_paciente());
         SharedPreferences sharedPreferences = getSharedPreferences("mis_preferencias", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.remove("usuario");
         editor.remove("contraseña");
         editor.clear(); // Eliminar todas las preferencias
         editor.apply(); // Aplicar los cambios
+        PacienteArrayList.clear();
+
+
 
         // Redirigir a la pantalla de inicio de sesión
         Intent intent = new Intent(this, IniciarSessionActivity.class);
@@ -220,6 +225,40 @@ public class pacienteMenu extends AppCompatActivity implements NavigationView.On
 
     }
 
+    public void eliminarTokenUsuario(String id){
+        String Estado="Sin token";
+        StringRequest request=new StringRequest(Request.Method.POST, urlActualizarToken, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                String valor=response.trim();
+                if (valor.equalsIgnoreCase("datos actualizados")) {
+                    Toast.makeText(pacienteMenu.this, "Cerraste sesion", Toast.LENGTH_SHORT).show();
+
+
+                } else {
+                    Toast.makeText(pacienteMenu.this, valor, Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(pacienteMenu.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String,String>  params=new HashMap<String,String>();
+                params.put("id_paciente",id);
+                params.put("Token",Estado);
+                return params;
+            }
+        };
+        RequestQueue requestQueue= Volley.newRequestQueue( pacienteMenu.this);
+        requestQueue.add(request);
+    }
+
     public static void postRegistrarDispositivoEnServidor(String token, Context context, String id){
 
         // Instantiate the RequestQueue.
@@ -231,14 +270,12 @@ public class pacienteMenu extends AppCompatActivity implements NavigationView.On
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.i("infoxxx", "valor:" + response);
 
                         JSONObject respObj = null;
                         try {
                             respObj = new JSONObject(response);
 
                             String code = respObj.getString("code");
-                            String message = respObj.getString("message");
                             Integer id = respObj.getInt("id");
 
 

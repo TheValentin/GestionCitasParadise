@@ -2,6 +2,7 @@ package com.example.gestioncitasparadise.actividades.uiPaciente;
 
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,6 +75,7 @@ public class ReservaFragment extends Fragment {
 
     String urlEspecialidad="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/Mostrar_especialidad.php";
     String urlDoctor="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/MostrarDoctorFiltroEspecialidad.php";
+
 
     String urlHorarios="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/MostrarHorariosPacienteReserva.php";
     String UrlCita="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/RegistrarReservaCita.php";
@@ -204,7 +207,8 @@ public class ReservaFragment extends Fragment {
                 id_paciente=pacienteMenu.PacienteArrayList.get(0).getId_paciente().toString();
                 fechaCita=calendario.getEditText().getText().toString();
                 if(  id_paciente!=null && hora!=null && fechaCita!=null &&   !id_paciente.isEmpty() && !hora.isEmpty() && !fechaCita.isEmpty()){
-                    GuardarReserva(id_paciente,hora,fechaCita);
+                    String mensaje="Tienes una nueva cita pendiente";
+                    GuardarReserva(id_paciente,hora,fechaCita,mensaje);
                 }else {
                     Toast.makeText(getContext(),"No se Registrado Correctamente",Toast.LENGTH_SHORT).show();
                 }
@@ -390,7 +394,7 @@ public class ReservaFragment extends Fragment {
         int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
 
         // Crea un DatePickerDialog y establece el listener de fecha seleccionada
-        DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(),new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 
@@ -447,11 +451,12 @@ public class ReservaFragment extends Fragment {
 
             }
         }, year, month, dayOfMonth);
+        datePickerDialog.getDatePicker().setMinDate(calendar.getTimeInMillis());
 
         // Muestra el cuadro de calendario
         datePickerDialog.show();
     }
-    private void GuardarReserva(String id_paciente,String id_horario, String fechaCita){
+    private void GuardarReserva(String id_paciente,String id_horario, String fechaCita,String mensaje){
         final ProgressDialog progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Cargando");
 
@@ -461,7 +466,8 @@ public class ReservaFragment extends Fragment {
                 public void onResponse(String response) {
                     String valor=response.trim();
                     if (valor.equalsIgnoreCase("Datos insertados correctamente.")) {
-                        Toast.makeText(getActivity(), "Cita Registrada", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Cita Registrada"+mensaje, Toast.LENGTH_SHORT).show();
+                        enviarNotificacion(id_horario,"Nueva Cita",mensaje);
                         progressDialog.dismiss();
                         openFragment(new HistorialFragment());
 
@@ -496,6 +502,36 @@ public class ReservaFragment extends Fragment {
         FragmentTransaction fragmentTransaction =getActivity().getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container_Paciente, fragment); // Reemplaza "R.id.fragment_container_Admin" con el ID correcto del contenedor del fragmento en tu diseño XML
         fragmentTransaction.commit();
+
+    }
+
+    public void enviarNotificacion(String idHora, String titulo, String mensaje ){
+        String  urlNotificacion="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/EnviarNotificaciones.php";
+        StringRequest request=new StringRequest(Request.Method.POST, urlNotificacion, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String,String>  params=new HashMap<String,String>();
+                params.put("id_hora",idHora);
+                params.put("TITULO",titulo);
+                params.put("MENSAJE",mensaje);
+
+                return params;
+            }
+        };
+        RequestQueue requestQueue= Volley.newRequestQueue( getActivity());
+        requestQueue.add(request);
 
     }
 

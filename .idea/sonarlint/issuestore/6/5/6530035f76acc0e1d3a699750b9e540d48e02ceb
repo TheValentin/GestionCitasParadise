@@ -1,49 +1,60 @@
 
 |
-java:S2293æ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8Åâ˜–“1
+java:S2293ê"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8²ç¡ó”1
 |
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8Æâ˜–“1
-Œ
-java:S1319>"oThe type of "DoctorArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(ş¦îÌ8Æâ˜–“1
-n	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÙ°å8Æâ˜–“1
-J
-java:S1604a"(Make this anonymous inner class a lambda(“µ³Ğıÿÿÿÿ8Æâ˜–“1
-K
-java:S1604º"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ8Çâ˜–“1
-K
-java:S1604Ü"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8Çâ˜–“1
-K
-java:S1604û"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ8Çâ˜–“1
-K
-java:S1604”"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8Çâ˜–“1
-x
-java:S1104>"[Make DoctorArrayList a static final constant or non-public and provide accessors if needed.(ş¦îÌ8Çâ˜–“1
-{
-java:S1104?"YMake HorariosArray a static final constant or non-public and provide accessors if needed.(…´ô¯ùÿÿÿÿ8Çâ˜–“1
-R
-java:S1444>"5Make this "public static DoctorArrayList" field final(ş¦îÌ8Çâ˜–“1
-U
-java:S1444?"3Make this "public static HorariosArray" field final(…´ô¯ùÿÿÿÿ8Çâ˜–“1
-i	java:S1016"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¶Ï ¼8ä…›š“1
-r	java:S116C"VRename this field "contraseÃ±a" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹æªí8ğâ˜–“1
-w
-java:S3008>"ZRename this field "DoctorArrayList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş¦îÌ8ğâ˜–“1
-z
-java:S3008?"XRename this field "HorariosArray" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…´ô¯ùÿÿÿÿ8ğâ˜–“1
-:
-java:S2386>"Make this member "protected".(ş¦îÌ8÷â˜–“1
-?
-java:S2386?"Make this member "protected".(…´ô¯ùÿÿÿÿ8÷â˜–“1
-X	java:S125g"<This block of commented-out lines of code should be removed.(Î·…§8‚ã˜–“1
-]	java:S125k"<This block of commented-out lines of code should be removed.(ÒûŸĞüÿÿÿÿ8ƒã˜–“1
-X	java:S125o"<This block of commented-out lines of code should be removed.(®¼¨8„ã˜–“1
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8²ç¡ó”1
+|
+java:S2293Ä"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô›Óíüÿÿÿÿ8²ç¡ó”1
 m
-java:S1874˜"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ8‡ã˜–“1
-k	java:S100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­†ì¥8ã˜–“1
-^
-java:S1854ƒ";Remove this useless assignment to local variable "message".(Ñ—İşÿÿÿÿ8’ã˜–“1
-O
-java:S1481ƒ",Remove this unused "message" local variable.(Ñ—İşÿÿÿÿ8“ã˜–“1
-Y	java:S125—"<This block of commented-out lines of code should be removed.(“èØù8”ã˜–“1
+java:S1192Ì"JDefine a constant instead of duplicating this literal "id_doctor" 3 times.(¡œ’·ùÿÿÿÿ8²ç¡ó”1
+Œ
+java:S1319>"oThe type of "DoctorArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(ş¦îÌ8³ç¡ó”1
+n	java:S117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÙ°å8³ç¡ó”1
+s	java:S117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šíĞ¬øÿÿÿÿ8³ç¡ó”1
+J
+java:S1604a"(Make this anonymous inner class a lambda(“µ³Ğıÿÿÿÿ8³ç¡ó”1
+K
+java:S1604¾"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ8³ç¡ó”1
+K
+java:S1604à"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8³ç¡ó”1
+K
+java:S1604ú"(Make this anonymous inner class a lambda(Ñ¦Ôşÿÿÿÿ8³ç¡ó”1
+K
+java:S1604…"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8³ç¡ó”1
+K
+java:S1604¡"(Make this anonymous inner class a lambda(±æÿÚıÿÿÿÿ8³ç¡ó”1
+K
+java:S1604º"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ8³ç¡ó”1
+x
+java:S1104>"[Make DoctorArrayList a static final constant or non-public and provide accessors if needed.(ş¦îÌ8³ç¡ó”1
+{
+java:S1104?"YMake HorariosArray a static final constant or non-public and provide accessors if needed.(…´ô¯ùÿÿÿÿ8³ç¡ó”1
+R
+java:S1444>"5Make this "public static DoctorArrayList" field final(ş¦îÌ8³ç¡ó”1
+U
+java:S1444?"3Make this "public static HorariosArray" field final(…´ô¯ùÿÿÿÿ8³ç¡ó”1
+i	java:S1016"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¶Ï ¼8´ç¡ó”1
+§
+java:S1862n"„This branch can not be reached because the condition duplicates a previous condition in the same sequence of "if/else if" statements(ªë‘Öûÿÿÿÿ8µç¡ó”1
+r	java:S116C"VRename this field "contraseÃ±a" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹æªí8Úç¡ó”1
+w
+java:S3008>"ZRename this field "DoctorArrayList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş¦îÌ8Úç¡ó”1
+z
+java:S3008?"XRename this field "HorariosArray" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…´ô¯ùÿÿÿÿ8Úç¡ó”1
+:
+java:S2386>"Make this member "protected".(ş¦îÌ8áç¡ó”1
 ?
-java:S1116¤"Remove this empty statement.(ôŸìúÿÿÿÿ8”ã˜–“1
+java:S2386?"Make this member "protected".(…´ô¯ùÿÿÿÿ8áç¡ó”1
+X	java:S125f"<This block of commented-out lines of code should be removed.(ëˆöæ8íç¡ó”1
+]	java:S125k"<This block of commented-out lines of code should be removed.(ÒûŸĞüÿÿÿÿ8îç¡ó”1
+]	java:S125n"<This block of commented-out lines of code should be removed.(ªë‘Öûÿÿÿÿ8ïç¡ó”1
+m
+java:S1874˜"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ8ñç¡ó”1
+k	java:S100º"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­†ì¥8÷ç¡ó”1
+^
+java:S1854©";Remove this useless assignment to local variable "message".(Ñ—İşÿÿÿÿ8ÿç¡ó”1
+O
+java:S1481©",Remove this unused "message" local variable.(Ñ—İşÿÿÿÿ8ÿç¡ó”1
+Y	java:S125½"<This block of commented-out lines of code should be removed.(“èØù8€è¡ó”1
+?
+java:S1116Ê"Remove this empty statement.(ôŸìúÿÿÿÿ8è¡ó”1

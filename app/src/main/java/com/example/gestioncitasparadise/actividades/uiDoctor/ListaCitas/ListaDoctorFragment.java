@@ -175,7 +175,8 @@ public class ListaDoctorFragment extends Fragment {
             public void onResponse(String response) {
                 String valor=response.trim();
                 if (valor.equalsIgnoreCase("datos actualizados")) {
-                    Toast.makeText(getActivity(), "Cita Cancelada"+idCita, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Cita Cancelada", Toast.LENGTH_SHORT).show();
+
                     enviarNotificacion(idCita,"Cita Cancelada",mensaje);
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                     fragmentManager.popBackStack();

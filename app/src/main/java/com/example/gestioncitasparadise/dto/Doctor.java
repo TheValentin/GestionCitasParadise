@@ -2,7 +2,7 @@ package com.example.gestioncitasparadise.dto;
 
 public class Doctor {
     int id_doctor,id_especialidad,id_distrito,id_sedes;
-    String nombre_doctor,apellido_doctor,dni_doctor, telefono_doctor,direccion_doctor,email_doctor,password_doctor,rol;
+    String nombre_doctor,apellido_doctor,dni_doctor, telefono_doctor,direccion_doctor,email_doctor,password_doctor,rol, fecha;
     String NombreEspecialidad,NombreDistrito, NombreSede;
 
     public Doctor() {

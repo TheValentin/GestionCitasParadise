@@ -24,6 +24,64 @@
             android:textStyle="bold"
             android:textSize="36sp"/>
 
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hasta la fecha" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtfechahorasLimite"
+                android:layout_width="246dp"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:padding="@dimen/pd_TextImpus">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="213dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Fecha"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btncalendarioReservaReprogramarDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/btnColor"
+                android:text="@string/Calendario"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha limite de citas" />
+
+        <TextView
+            android:id="@+id/txtFechalimite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Fecha limite de citas" />
+
         <ListView
             android:id="@+id/list_horariosDoctor"
             android:layout_width="371dp"

@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -60,6 +61,8 @@ public class HistorialFragment extends Fragment {
     String UrlEliminar="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/EliminarReservaCitasPaciente.php";
     String url_cancelarita="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/CancelarCitaPaciente.php";
     String UrlListarCita="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/MostrarCitasPaciente.php";
+    static String  urlNotificacion="https://thevalentin.000webhostapp.com/Proyectos/ServidorGestionCitas/EnviarNotificacionesDoctor.php";
+
 
     String idPaciente;
 
@@ -107,6 +110,8 @@ public class HistorialFragment extends Fragment {
                 builder.setTitle(citaArrayList.get(position).getNombreEspecialidad()+" "+citaArrayList.get(position).getDia_semana()+" "+citaArrayList.get(position).getFecha());
 
                 String idCita=citaArrayList.get(position).getId_cita();
+
+                String mensaje="Se cancelo la cita del dia "+citaArrayList.get(position).getDia_semana()+" "+citaArrayList.get(position).getFecha()+" de la hora "+citaArrayList.get(position).getHora_inicio();
                 builder.setItems(dialogo, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
@@ -115,7 +120,7 @@ public class HistorialFragment extends Fragment {
                                 Actualizar(position);
                                 break;
                             case 1:
-                                cancelarCita(idCita);
+                                cancelarCita(idCita, mensaje);
                                 break;
                         }
                     }
@@ -216,7 +221,7 @@ public class HistorialFragment extends Fragment {
                     }
                 });
     }
-    private void cancelarCita(String idCita){
+    private void cancelarCita(String idCita,String mensaje){
         String Estado="Cancelado";
 
         StringRequest request=new StringRequest(Request.Method.POST, url_cancelarita, new Response.Listener<String>() {
@@ -225,7 +230,7 @@ public class HistorialFragment extends Fragment {
                 String valor=response.trim();
                 if (valor.equalsIgnoreCase("datos actualizados")) {
                     Toast.makeText(getActivity(), "Cita Cancelada", Toast.LENGTH_SHORT).show();
-
+                    enviarNotificacion(getActivity() ,idCita,"Cita Cancelada",mensaje);
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                     fragmentManager.popBackStack();
                     listarHistorialCita(idPaciente);
@@ -268,6 +273,33 @@ public class HistorialFragment extends Fragment {
         fragmentTransaction.replace(R.id.fragment_container_Paciente, fragmentoActualizar); // Reemplaza "R.id.container" con el ID correcto del contenedor del Fragmento en tu diseño XML
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
+    }
+    public static void enviarNotificacion(Context context, String idCita, String titulo, String mensaje ){
+        StringRequest request=new StringRequest(Request.Method.POST, urlNotificacion, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String,String>  params=new HashMap<String,String>();
+                params.put("id_cita",idCita);
+                params.put("TITULO",titulo);
+                params.put("MENSAJE",mensaje);
+
+                return params;
+            }
+        };
+        RequestQueue requestQueue= Volley.newRequestQueue( context);
+        requestQueue.add(request);
+
     }
 
 
